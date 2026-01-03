@@ -1,0 +1,155 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-lg);
+    background: var(--bg-sidebar);
+    border-right: 1px solid var(--border-subtle);
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .sidebar {
+        width: var(--sidebar-width);
+        flex-shrink: 0;
+        height: 100vh;
+        overflow-y: auto;
+
+        /* The Requested Formatting */
+        margin-left: 5px;
+        /* If user wanted just margin inside the bar, padding handles it, 
+       but if they meant the bar starts 5px from edge: */
+        /* border-left: 1px solid var(--border-subtle); Optional framing */
+    }
+}
+
+/* Clean Flat Design - No Cards */
+.sidebar-card {
+    margin-bottom: var(--space-lg);
+    text-align: left;
+    /* Align left for Swiss/Minimalist look */
+}
+
+.profile-card {
+    text-align: center;
+    /* Profile still center usually looks best */
+    margin-top: var(--space-md);
+}
+
+/* Profile Section */
+.profile-image-container {
+    width: 160px;
+    height: 160px;
+    background: #E5E5E5;
+    border-radius: 50%;
+    /* Circle */
+    margin: 0 auto var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Minimalist: No extensive shadows */
+}
+
+.profile-placeholder {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.profile-name {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: var(--space-xs);
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+}
+
+.profile-email {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-xs);
+}
+
+.profile-degree {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    margin-bottom: var(--space-lg);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.download-btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 32px;
+    border-radius: 0;
+    /* Sharp for minimalist */
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.download-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+/* Info List */
+.info-card h3,
+.skills-card h3,
+.languages-card h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: var(--space-md);
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.info-list {
+    list-style: none;
+}
+
+.info-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.info-list .value {
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.appointment-open {
+    color: var(--text-main);
+    border-bottom: 1px solid var(--primary-color);
+    /* Underline style for "Open" */
+}
+
+/* Skills/Languages */
+.skills-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    transition: var(--transition);
+}
+
+.skill-tag:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}

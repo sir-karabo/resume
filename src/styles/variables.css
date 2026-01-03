@@ -1,0 +1,52 @@
+:root {
+  /* Woolworths Minimalist Palette */
+  --primary-color: #000000;
+  /* Jet Black */
+  --primary-hover: #333333;
+
+  --bg-body: #FFFFFF;
+  /* Pure White */
+  --bg-card: #FFFFFF;
+  --bg-sidebar: #F8F8F8;
+  /* Very subtle grey for differentiation */
+
+  --text-main: #111111;
+  --text-secondary: #555555;
+  --text-light: #888888;
+
+  --border-subtle: #EAEAEA;
+  --border-strong: #000000;
+
+  /* Typography */
+  --font-heading: 'Inter', 'SF Pro Display', Helvetica, Arial, sans-serif;
+  /* Clean, modern geometry */
+  --font-body: 'Inter', Helvetica, Arial, sans-serif;
+  --accent-green: #004d40;
+  /* Subtle dark green for headings/separators */
+
+  /* Dimensions */
+  --sidebar-width: 380px;
+  /* Wide as requested */
+  --max-width: 98%;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+  /* Generous whitespace */
+
+  /* Effects */
+  --shadow-sm: none;
+  /* Flat design */
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.03);
+  /* Extremely subtle lift */
+
+  --radius-md: 0;
+  /* Sharp corners for minimalist look? Or slightly soft? Let's go slightly soft */
+  --radius-lg: 4px;
+
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Smooth elegant movement */
+}

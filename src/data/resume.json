@@ -1,0 +1,145 @@
+{
+    "profile": {
+        "name": "Karabo Nhlamulo",
+        "fullName": "Karabo Nhlamulo Magongwa",
+        "title": "Software Engineer",
+        "email": "sir.karabom@gmail.com",
+        "degree": "Bachelor of Science in Information Technology",
+        "summary": "Dynamic BScIT graduate with a proven ability to design, develop, and optimize software solutions that drive efficiency and user engagement. Proficient in crafting intuitive web applications, leveraging modern frameworks to deliver scalable and innovative products.",
+        "location": "Remote",
+        "experience": "5+ years",
+        "availability": "Appointment Open"
+    },
+    "contact": {
+        "email": "sir.karabom@gmail.com",
+        "linkedin": "https://linkedin.com/in/karabo-magongwa",
+        "github": "https://github.com",
+        "facebook": "https://facebook.com",
+        "instagram": "https://instagram.com"
+    },
+    "skills": [
+        "ASP.NET",
+        "C#",
+        "ASP.NET Core",
+        "SQL",
+        "Java",
+        "C",
+        "React",
+        "Laravel",
+        "Python",
+        "PHP",
+        "HTML",
+        "Git"
+    ],
+    "languages": [
+        "English",
+        "Sepedi",
+        "Tswana",
+        "Xitsonga"
+    ],
+    "experience": [
+        {
+            "id": 1,
+            "role": "Junior Software Developer",
+            "company": "Sonxit",
+            "location": "Sandton",
+            "period": "June 2022 - 2024",
+            "description": "At Sonxit Pty Ltd tech, I design and develop robust front-end and back-end solutions leveraging the MERN and Laravel stack lifecycles. I focus on implementing new features to enhance the courier service platform's functionality and agile MVC architecture to streamline development.",
+            "type": "Remote"
+        },
+        {
+            "id": 2,
+            "role": "Software Developer",
+            "company": "Sandi",
+            "location": "Sandburg",
+            "period": "June 2019 - 2021",
+            "description": "My role involved conducting comprehensive code reviews, participating in client meetings, and developing and maintaining server-side applications and services. I also integrate third-party APIs and services to expand platform capabilities.",
+            "type": "Hybrid"
+        },
+        {
+            "id": 3,
+            "role": "Software Systems Developer",
+            "company": "MDS Colliery",
+            "location": "Selby",
+            "period": "2017 - 2019",
+            "description": "Here at MDS Tech as a courier service developer, I learnt to maintain operations following regulations during projects & risk management duties, during on-site & off-site operations within compliance standards.",
+            "type": "Full Time"
+        },
+        {
+            "id": 4,
+            "role": "Junior IT Technician",
+            "company": "PHDM",
+            "location": "Centurion",
+            "period": "2016 - 2017",
+            "description": "I learnt to maintain operations following regulations with the team, during projects & risk management duties during on-site & off-site operations.",
+            "type": "Full Time"
+        }
+    ],
+    "education": [
+        {
+            "id": 1,
+            "institution": "Belgium Campus iTvarsity",
+            "degree": "Alumni in Software Engineering",
+            "location": "South Africa",
+            "period": "2021 - May 2024"
+        },
+        {
+            "id": 2,
+            "institution": "Willow Ridge High School",
+            "degree": "Certificate Of Completion",
+            "location": "South Africa",
+            "period": "2008 - Dec 2012"
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "title": "Thoko Pty Ltd",
+            "category": "Web Applications",
+            "image": "/images/thoko.png",
+            "link": "#",
+            "techStack": [
+                "React",
+                "Node.js",
+                "MongoDB"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Sonxit Pty Ltd",
+            "category": "Web Applications",
+            "image": "/images/sonxit.png",
+            "link": "#",
+            "techStack": [
+                "Laravel",
+                "PHP",
+                "MySQL",
+                "Vue.js"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "The High Home Community",
+            "category": "Web Applications",
+            "image": "/images/highhome.png",
+            "link": "#",
+            "techStack": [
+                "ASP.NET Core",
+                "C#",
+                "SQL Server"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Sir-Karabo Portfolio",
+            "category": "Web Design",
+            "image": "/images/portfolio.png",
+            "link": "#",
+            "techStack": [
+                "React",
+                "Vite",
+                "CSS3"
+            ]
+        }
+    ]
+}

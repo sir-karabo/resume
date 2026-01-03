@@ -1,0 +1,102 @@
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    /* Header fixed, content scrolls */
+    background: white;
+}
+
+/* Header Area */
+.content-header {
+    padding: var(--space-lg) var(--space-xl) 0;
+    background: white;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.intro-mini h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    /* Thin elegance */
+    margin-bottom: var(--space-sm);
+    letter-spacing: -1px;
+}
+
+.intro-mini .highlight {
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-color);
+    /* Underline for name */
+}
+
+.intro-mini p {
+    max-width: 900px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: var(--space-lg);
+}
+
+/* Minimalist Nav */
+.minimal-nav {
+    display: flex;
+    gap: var(--space-lg);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-btn {
+    padding: 0 0 16px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-light);
+    background: none;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-btn:hover {
+    color: var(--primary-color);
+}
+
+.nav-btn.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.nav-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    /* On top of border */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-green);
+}
+
+/* Viewport Area */
+.content-viewport {
+    flex-grow: 1;
+    padding: var(--space-lg) var(--space-xl);
+    overflow-y: auto;
+    /* Scroll ONLY the content, header stays put */
+    scroll-behavior: smooth;
+}
+
+/* Animation */
+.slide-content.fade-in {
+    animation: fadeInSlide 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

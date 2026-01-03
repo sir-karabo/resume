@@ -1,0 +1,122 @@
+.section-container {
+    max-width: 100%;
+}
+
+.section-title {
+    display: none;
+    /* Hide old titles since we have tabs now */
+}
+
+.subsection-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-light);
+    margin-bottom: var(--space-lg);
+    display: block;
+}
+
+/* Clean Timeline - No Line, Just Text Blocks */
+.timeline {
+    padding-left: 0;
+    border: none;
+}
+
+.timeline::before {
+    display: none;
+    /* Remove line */
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 768px) {
+    .timeline-item {
+        display: block;
+        /* No more grid columns, full width flow */
+        gap: var(--space-lg);
+    }
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-icon {
+    display: none;
+    /* Minimalist: No icons needed */
+}
+
+/* Meta Data (Date Section) */
+.timeline-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    margin: 0;
+}
+
+.timeline-meta .date {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.timeline-meta .location {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* Content Section */
+.timeline-content {
+    background: none;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.timeline-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xs);
+}
+
+.role-title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    /* Elegance */
+    color: var(--text-main);
+}
+
+.company {
+    font-weight: 600;
+    color: var(--text-main);
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.job-type {
+    background: none;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    padding: 2px 6px;
+    font-size: 0.7rem;
+}
+
+.job-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    /* Relaxed reading */
+    max-width: 100%;
+    width: 100%;
+    padding-right: 10%;
+    /* 10% margin as requested */
+}

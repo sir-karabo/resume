@@ -47,6 +47,7 @@ const ExperienceTimeline = ({ experience, education }) => {
                                     <span className="location">{edu.location}</span>
                                     <span className="date">{edu.period}</span>
                                 </div>
+                                {edu.focus && <p className="job-description">{edu.focus}</p>}
                             </div>
                         </div>
                     ))}

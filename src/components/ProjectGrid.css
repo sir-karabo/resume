@@ -52,6 +52,8 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    text-align: left;
 }
 
 .project-title {
@@ -68,6 +70,20 @@
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 20px;
+}
+
+/* Full‑width description for each project */
+.project-description {
+    margin-top: var(--space-sm);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.project-description strong {
+    color: var(--text-main);
+    font-weight: 600;
 }
 
 /* New Tech Stack Logos Style */

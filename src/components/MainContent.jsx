@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ExperienceTimeline from './ExperienceTimeline';
 import ProjectGrid from './ProjectGrid';
+import ProjectDetail from './ProjectDetail';
 import ContactForm from './ContactForm';
 import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import './MainContent.css';
@@ -8,6 +9,12 @@ import './MainContent.css';
 const MainContent = ({ profile, experience, education, projects, contact }) => {
     // Navigation State
     const [activeTab, setActiveTab] = useState('career');
+    const [selectedProject, setSelectedProject] = useState(null);
+
+    const handleTabChange = (tab) => {
+        setActiveTab(tab);
+        setSelectedProject(null); // Reset detail view when changing tabs
+    };
 
     return (
         <main className="main-content">
@@ -21,19 +28,19 @@ const MainContent = ({ profile, experience, education, projects, contact }) => {
                 <nav className="minimal-nav">
                     <button
                         className={`nav-btn ${activeTab === 'career' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('career')}
+                        onClick={() => handleTabChange('career')}
                     >
                         Career
                     </button>
                     <button
                         className={`nav-btn ${activeTab === 'case-study' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('case-study')}
+                        onClick={() => handleTabChange('case-study')}
                     >
                         Case Studies
                     </button>
                     <button
                         className={`nav-btn ${activeTab === 'connect' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('connect')}
+                        onClick={() => handleTabChange('connect')}
                     >
                         Connect
                     </button>
@@ -51,7 +58,17 @@ const MainContent = ({ profile, experience, education, projects, contact }) => {
 
                 {activeTab === 'case-study' && (
                     <div className="slide-content fade-in">
-                        <ProjectGrid projects={projects} />
+                        {selectedProject ? (
+                            <ProjectDetail
+                                project={selectedProject}
+                                onBack={() => setSelectedProject(null)}
+                            />
+                        ) : (
+                            <ProjectGrid
+                                projects={projects}
+                                onProjectClick={setSelectedProject}
+                            />
+                        )}
                     </div>
                 )}
 

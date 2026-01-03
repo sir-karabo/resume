@@ -36,7 +36,7 @@ const Sidebar = ({ profile, skills, languages, social }) => {
                     </li>
                     <li>
                         <span className="label">Availability</span>
-                        <span className="value appointment-open">Appointment Open</span>
+                        <span className="value appointment-open">{profile.availability || 'Appointment Open'}</span>
                     </li>
                 </ul>
             </div>
@@ -59,7 +59,20 @@ const Sidebar = ({ profile, skills, languages, social }) => {
                 </div>
             </div>
 
-            {/* Social Links shown in profile card usually, but can be separate too. In screenshot it's in the intro section actually, but we can add here for mobile or extra visibility */}
+            <div className="sidebar-footer">
+                <div className="social-links">
+                    {social.linkedin && (
+                        <a href={social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <FaLinkedin />
+                        </a>
+                    )}
+                    {social.github && (
+                        <a href={social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <FaGithub />
+                        </a>
+                    )}
+                </div>
+            </div>
         </aside>
     );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent';
 import resumeData from './data/resume.json';
+import projectsData from './data/projects.json';
 
 function App() {
     return (
@@ -16,7 +17,7 @@ function App() {
                 profile={resumeData.profile}
                 experience={resumeData.experience}
                 education={resumeData.education}
-                projects={resumeData.projects}
+                projects={projectsData}
                 contact={resumeData.contact}
             />
         </div>

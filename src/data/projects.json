@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "title": "Tic Tac Toe & Snake Game Suite",
+        "category": "OOP Projects | Programming principle & Code Showcases",
+        "year": "2021",
+        "role": "Individual",
+        "problem": "Designed to demonstrate core Object-Oriented Programming (OOP) principles like encapsulation and inheritance within a game loop structure.",
+        "approach": "Java-based logic using classes for game state management and coordinate systems.",
+        "outcome": "Successfully implemented collision detection and turn-based logic through clean code practices.",
+        "techStack": [
+            "Java"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Student Library & Booking System",
+        "category": "OOP Projects | Programming principle & Code Showcases",
+        "year": "2022",
+        "role": "Individual",
+        "problem": "A desktop-based solution meant to solve basic inventory tracking and reservation logic for academic resources.",
+        "approach": "C# WinForms with local SQL integration for persistent data storage.",
+        "outcome": "Demonstrated modular UI design and CRUD operations within a structured local environment.",
+        "techStack": [
+            "C#",
+            "SQL Server"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Thoko Academic Information System",
+        "category": "Full-Stack Projects | System Design & SDLC Showcases",
+        "year": "2023",
+        "role": "Individual",
+        "problem": "Designed to simulate a commerce-grade student dashboard for tracking academic progress and registrations.",
+        "approach": "MERN Stack (MongoDB, Express, React, Node.js) with modular REST API architecture.",
+        "outcome": "Developed a full-stack system showcasing end-to-end SDLC documentation and state management.",
+        "techStack": [
+            "React",
+            "Node.js",
+            "MongoDB"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Enterprise Scheduling Application",
+        "category": "Full-Stack Projects | System Design & SDLC Showcases",
+        "year": "2023",
+        "role": "Team Lead",
+        "problem": "A capstone project simulating a merchant-style scheduling tool for service providers.",
+        "approach": "ASP.NET Core with a C# backend utilizing a relational database for complex scheduling constraints.",
+        "outcome": "Successfully coordinated team efforts to produce a scalable system architecture with secure authentication.",
+        "techStack": [
+            "ASP.NET Core",
+            "C#",
+            "SQL Server"
+        ]
+    }
+]

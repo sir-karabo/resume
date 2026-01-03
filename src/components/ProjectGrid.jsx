@@ -1,13 +1,14 @@
 import React from 'react';
 import './ProjectGrid.css';
 import {
-    FaEye, FaReact, FaNodeJs, FaLaravel, FaPhp, FaVuejs, FaCss3, FaDatabase
+    FaEye, FaReact, FaNodeJs, FaLaravel, FaPhp, FaVuejs, FaCss3, FaDatabase, FaJava
 } from 'react-icons/fa';
 import {
     SiMongodb, SiMysql, SiDotnet, SiMicrosoftsqlserver, SiVite, SiCsharp
 } from 'react-icons/si';
 
-const getTechIcon = (techName) => {
+
+export const getTechIcon = (techName) => {
     const normalize = techName.toLowerCase();
 
     if (normalize.includes('react')) return <FaReact color="#61DAFB" />;
@@ -22,17 +23,23 @@ const getTechIcon = (techName) => {
     if (normalize.includes('sql server')) return <SiMicrosoftsqlserver color="#CC2927" />;
     if (normalize.includes('vite')) return <SiVite color="#646CFF" />;
     if (normalize.includes('css')) return <FaCss3 color="#1572B6" />;
+    if (normalize === 'java' || (normalize.includes('java') && !normalize.includes('script'))) return <FaJava color="#007396" />;
 
     // Default fallback
     return <FaDatabase color="#ccc" />;
 };
 
-const ProjectGrid = ({ projects }) => {
+const ProjectGrid = ({ projects, onProjectClick }) => {
     return (
         <section className="section-container">
             <div className="projects-grid">
                 {projects.map((project) => (
-                    <div key={project.id} className="project-card">
+                    <div
+                        key={project.id}
+                        className="project-card"
+                        onClick={() => onProjectClick && onProjectClick(project)}
+                        style={{ cursor: onProjectClick ? 'pointer' : 'default' }}
+                    >
                         <div className="project-image">
                             <div className="image-placeholder">
                                 {project.title}
@@ -42,8 +49,14 @@ const ProjectGrid = ({ projects }) => {
                             <h4 className="project-title">{project.title}</h4>
                             <p className="project-category">{project.category}</p>
 
+                            <div className="project-description">
+                                <p><strong>Problem:</strong> {project.problem}</p>
+                                <p style={{ marginTop: '0.5rem' }}><strong>Approach:</strong> {project.approach}</p>
+                                <p style={{ marginTop: '0.5rem' }}><strong>Outcome:</strong> {project.outcome}</p>
+                            </div>
+
                             {/* Tech Stack Logos */}
-                            <div className="tech-stack-logos">
+                            <div className="tech-stack-logos" style={{ marginTop: '1.5rem' }}>
                                 {project.techStack && project.techStack.map((tech, idx) => (
                                     <div key={idx} className="tech-logo-wrapper" title={tech}>
                                         {getTechIcon(tech)}
@@ -51,11 +64,19 @@ const ProjectGrid = ({ projects }) => {
                                 ))}
                             </div>
 
-                            <div className="project-links">
-                                <a href={project.link} className="project-link">
-                                    View Project <span style={{ fontSize: '0.8em' }}>↗</span>
-                                </a>
-                            </div>
+                            {project.link && (
+                                <div className="project-links">
+                                    <a
+                                        href={project.link}
+                                        className="project-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        View Project <span style={{ fontSize: '0.8em' }}>↗</span>
+                                    </a>
+                                </div>
+                            )}
                         </div>
                     </div>
                 ))}

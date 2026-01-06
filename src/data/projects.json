@@ -2,13 +2,13 @@
     {
         "id": 1,
         "title": "Smart Housing Application",
-        "category": "AI & Mobile Projects",
+        "category": "Capstone & AI",
         "image": "/assets/projects/project-1.jpg",
         "year": "2024",
         "role": "Lead Developer",
         "problem": "Real-time property valuation and market trend analysis is often inaccessible to average buyers.",
-        "approach": "Integrated predictive AI models within a cross-platform mobile interface for instant property insights.",
-        "outcome": "Delivered accurate price predictions and enhanced user decision-making processes.",
+        "approach": "Integrated predictive AI models (TensorFlow) within a detailed mobile interface to deliver instant, data-driven property insights.",
+        "outcome": "Demonstrated proficiency in integrating machine learning pipelines with mobile application architectures.",
         "techStack": [
             "Python",
             "TensorFlow",
@@ -17,14 +17,14 @@
     },
     {
         "id": 2,
-        "title": "Business Invoicing Solution",
-        "category": "AI & Mobile Projects",
+        "title": "Business Invoicing System",
+        "category": "Capstone & AI",
         "image": "/assets/projects/project-2.jpg",
         "year": "2024",
-        "role": "Full Stack Developer",
-        "problem": "Small businesses lack automated tools for processing and categorizing invoice data efficiently.",
-        "approach": "Developed a mobile scanning app with OCR capabilities and intelligent expense categorization.",
-        "outcome": "Reduced manual data entry time by 60% for beta test users.",
+        "role": "Full Stack Engineer",
+        "problem": "Manual invoice processing lacks efficiency and is prone to human error in small-scale operations.",
+        "approach": "Engineered an OCR-enabled mobile solution utilizing OpenCV for automated text extraction and categorization.",
+        "outcome": "Validated the viability of automated financial data processing on mobile platforms.",
         "techStack": [
             "Flutter",
             "Python",
@@ -33,14 +33,14 @@
     },
     {
         "id": 3,
-        "title": "AI Food Recommendation App",
-        "category": "AI & Mobile Projects",
+        "title": "Dietary Recommendation Engine",
+        "category": "Capstone & AI",
         "image": "/assets/projects/project-3.jpg",
         "year": "2024",
-        "role": "Individual",
-        "problem": "Personalized dietary planning and recipe discovery can be overwhelming and disjointed.",
-        "approach": "Built a recommendation engine analyzing user preferences to suggest tailored meal plans.",
-        "outcome": "Successfully deployed an intuitive app focusing on user retention and health goals.",
+        "role": "Algorithm Developer",
+        "problem": "Generic dietary planning lacks personalization based on dynamic health data.",
+        "approach": "Built a recommendation engine using Scikit-learn to analyze user preference vectors and suggest optimal meal plans.",
+        "outcome": "Achieved high accuracy in user preference matching through algorithmic optimization.",
         "techStack": [
             "React Native",
             "Python",
@@ -48,31 +48,15 @@
         ]
     },
     {
-        "id": 4,
-        "title": "Modern Corporate Website",
-        "category": "React & Full-Stack Projects",
-        "image": "/assets/projects/project-4.jpg",
-        "year": "2023",
-        "role": "Frontend Developer",
-        "problem": "Businesses need responsive, high-performance web presence to establish credibility.",
-        "approach": "Utilized React and modern CSS to create a pixel-perfect, responsive landing page.",
-        "outcome": "Improved page load speeds and SEO rankings for the client portfolio.",
-        "techStack": [
-            "React",
-            "CSS3",
-            "Vite"
-        ]
-    },
-    {
         "id": 5,
-        "title": "Interactive Blog Platform",
-        "category": "React & Full-Stack Projects",
+        "title": "Interactive Content Platform",
+        "category": "Full-Stack Engineering",
         "image": "/assets/projects/project-5.jpg",
         "year": "2023",
-        "role": "Full Stack Developer",
-        "problem": "Content creators require a flexible, custom CMS to manage and publish articles.",
-        "approach": "Implemented a MERN stack solution with a rich text editor and dynamic content rendering.",
-        "outcome": "Enabled seamless content management with secure authentication and real-time updates.",
+        "role": "System Architect",
+        "problem": "Need for a modular, scalable CMS to handle dynamic content serving.",
+        "approach": "Implemented a MERN stack solution focusing on database schema normalization and efficient API response times.",
+        "outcome": "Delivered a secure, high-performance content delivery system.",
         "techStack": [
             "React",
             "Node.js",
@@ -81,14 +65,14 @@
     },
     {
         "id": 6,
-        "title": "E-Commerce Storefront",
-        "category": "React & Full-Stack Projects",
+        "title": "E-Commerce State Manager",
+        "category": "Full-Stack Engineering",
         "image": "/assets/projects/project-6.jpg",
         "year": "2023",
         "role": "Lead Developer",
-        "problem": "Scalable online retail platforms require robust state management and secure transaction handling.",
-        "approach": "Designed a Redux-managed shopping cart with Stripe integration for secure payments.",
-        "outcome": "Launched a fully functional store capable of handling complex product variations.",
+        "problem": "Managing complex state in large-scale retail applications requires robust patterns.",
+        "approach": "Designed a Redux-managed state architecture to handle cart persistence and transaction flows securely.",
+        "outcome": "Showcased advanced state management patterns and secure payment gateway integration.",
         "techStack": [
             "React",
             "Redux",
@@ -97,59 +81,30 @@
     },
     {
         "id": 7,
-        "title": "Snake Game",
-        "category": "C# OOP Projects",
+        "title": "Search Algorithm Visualizer",
+        "category": "Computer Science Principles",
         "image": "/assets/projects/project-7.jpg",
         "year": "2022",
         "role": "Individual",
-        "problem": "Demonstrating game loop efficiency and collision handling in a desktop environment.",
-        "approach": "Applied OOP principles to manage game state, rendering, and input handling in C#.",
-        "outcome": "Created a smooth, bug-free classic game experience with score tracking.",
+        "problem": "Visualizing A* and Dijkstra algorithms for educational purposes.",
+        "approach": "Developed a C# application to render graph traversal algorithms in real-time.",
+        "outcome": "Provided a clear visual demonstration of algorithmic efficiency and pathfinding logic.",
         "techStack": [
             "C#",
-            ".NET"
-        ]
-    },
-    {
-        "id": 8,
-        "title": "Tic Tac Toe",
-        "category": "C# OOP Projects",
-        "image": "/assets/projects/project-8.jpg",
-        "year": "2022",
-        "role": "Individual",
-        "problem": "Implementing game logic and AI opponents using basic algorithms.",
-        "approach": "Developed a Windows Forms application with a Minimax algorithm for the CPU opponent.",
-        "outcome": "Showcased clean event-driven programming and logical problem solving.",
-        "techStack": [
-            "C#",
-            "WinForms"
-        ]
-    },
-    {
-        "id": 9,
-        "title": "Turn-Based Strategy Game",
-        "category": "C# OOP Projects",
-        "image": "/assets/projects/project-9.jpg",
-        "year": "2022",
-        "role": "Individual",
-        "problem": "Complex state management required for turn sequencing and unit attributes.",
-        "approach": "Designed a class hierarchy for units and a central game manager to control flow.",
-        "outcome": "Successfully modeled complex interactions and state persistence between turns.",
-        "techStack": [
-            "C#",
-            "Unity"
+            ".NET",
+            "Algorithms"
         ]
     },
     {
         "id": 10,
-        "title": "Library Management System",
-        "category": "Java OOP Projects",
+        "title": "Library Automation System",
+        "category": "Java Systems",
         "image": "/assets/projects/project-10.jpg",
         "year": "2021",
         "role": "Individual",
-        "problem": "Manual tracking of book inventory and member loans is prone to error.",
-        "approach": "Built a desktop application with Java Swing and File I/O for data persistence.",
-        "outcome": "Streamlined the borrowing process and automated fine calculations.",
+        "problem": "Demonstrating persistent data management in desktop applications.",
+        "approach": "Built a Java Swing application utilizing File I/O and object serialization for inventory tracking.",
+        "outcome": "Created a robust, crash-resistant system handling complex inventory states.",
         "techStack": [
             "Java",
             "Swing"
@@ -157,79 +112,33 @@
     },
     {
         "id": 11,
-        "title": "Banking System Simulator",
-        "category": "Java OOP Projects",
+        "title": "Secure Banking Simulator",
+        "category": "Java Systems",
         "image": "/assets/projects/project-11.jpg",
         "year": "2021",
         "role": "Individual",
-        "problem": "Simulating secure transactions and account management data structures.",
-        "approach": "Implemented secure user authentication and transaction logging using encapsulation.",
-        "outcome": "Demonstrated robust security principles and reliable data handling.",
-        "techStack": [
-            "Java"
-        ]
-    },
-    {
-        "id": 12,
-        "title": "Employment Management",
-        "category": "Java OOP Projects",
-        "image": "/assets/projects/project-12.jpg",
-        "year": "2021",
-        "role": "Individual",
-        "problem": "HR departments need efficient tools to track employee data and performance.",
-        "approach": "Designed a modular system for CRUD operations on employee records.",
-        "outcome": "Produced a clean, maintainable codebase adhering to SOLID principles.",
+        "problem": "Simulating secure concurrent transactions in a banking environment.",
+        "approach": "Implemented a multi-threaded system with strict encapsulation and transaction logging.",
+        "outcome": "Validated understanding of thread safety and data integrity principles.",
         "techStack": [
             "Java",
-            "JavaFX"
-        ]
-    },
-    {
-        "id": 13,
-        "title": "Doctor Appointment System",
-        "category": "PHP OOP Projects",
-        "image": "/assets/projects/project-13.jpg",
-        "year": "2022",
-        "role": "Full Stack Developer",
-        "problem": "Patients face friction when booking appointments through traditional phone methods.",
-        "approach": "Developed a web-based booking interface connected to a MySQL database.",
-        "outcome": "Reduced wait times and improved clinic schedule organization.",
-        "techStack": [
-            "PHP",
-            "MySQL",
-            "HTML/CSS"
-        ]
-    },
-    {
-        "id": 14,
-        "title": "Personnel Scheduling Tool",
-        "category": "PHP OOP Projects",
-        "image": "/assets/projects/project-14.jpg",
-        "year": "2022",
-        "role": "Back End Developer",
-        "problem": "Complex shift patterns are difficult to manage manually for large teams.",
-        "approach": "Created an automated scheduling algorithm to assign shifts based on availability.",
-        "outcome": "Optimized workforce allocation and minimized scheduling conflicts.",
-        "techStack": [
-            "PHP",
-            "Laravel",
-            "MySQL"
+            "Multi-threading"
         ]
     },
     {
         "id": 15,
-        "title": "E-Commerce Platform",
-        "category": "PHP OOP Projects",
+        "title": "MVC E-Commerce Architecture",
+        "category": "PHP Systems",
         "image": "/assets/projects/project-15.jpg",
         "year": "2022",
-        "role": "Full Stack Developer",
-        "problem": "Building a custom online store structure from scratch to understand core commerce logic.",
-        "approach": "Implemented a MVC architecture to separate business logic from the presentation layer.",
-        "outcome": "Delivered a secure, scalable platform with inventory and order management.",
+        "role": "Backend Developer",
+        "problem": "Understanding the MVC pattern through raw implementation.",
+        "approach": "Built a custom MVC framework in PHP to separate business logic, data access, and presentation layers.",
+        "outcome": "Deepened understanding of architectural patterns and separation of concerns.",
         "techStack": [
             "PHP",
             "MySQL",
-            "JavaScript"
+            "MVC"
         ]
     }
 ]

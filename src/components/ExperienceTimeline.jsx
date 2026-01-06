@@ -18,7 +18,6 @@ const ExperienceTimeline = ({ experience, education }) => {
                             <div className="timeline-content">
                                 <div className="timeline-header">
                                     <h4 className="role-title">{job.role}</h4>
-                                    <span className="job-type">{job.type}</span>
                                 </div>
                                 <div className="timeline-meta">
                                     <span className="company">{job.company}</span>
@@ -26,6 +25,13 @@ const ExperienceTimeline = ({ experience, education }) => {
                                     <span className="date">{job.period}</span>
                                 </div>
                                 <p className="job-description">{job.description}</p>
+                                {job.tech_stack && (
+                                    <div className="tech-stack">
+                                        {job.tech_stack.map((tech, idx) => (
+                                            <span key={idx} className="tech-badge">{tech}</span>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}

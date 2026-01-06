@@ -7,7 +7,7 @@ import AdminDashboard from './AdminDashboard';
 import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import './MainContent.css';
 
-const MainContent = ({ profile, experience, education, projects, contact }) => {
+const MainContent = ({ personalInfo, summary, experience, education, projects }) => {
     // Navigation State
     const [activeTab, setActiveTab] = useState('career');
     const [selectedProject, setSelectedProject] = useState(null);
@@ -22,8 +22,8 @@ const MainContent = ({ profile, experience, education, projects, contact }) => {
             {/* Sticky Header with Intro & Tabs */}
             <header className="content-header">
                 <div className="intro-mini">
-                    <h1>Hello, I'm <span className="highlight">{profile.name}</span>.</h1>
-                    <p>{profile.summary}</p>
+                    <h1>Hello, I'm <span className="highlight">{personalInfo.full_name}</span>.</h1>
+                    <p>{summary}</p>
                 </div>
 
                 <nav className="minimal-nav">
@@ -83,7 +83,7 @@ const MainContent = ({ profile, experience, education, projects, contact }) => {
 
                 {activeTab === 'connect' && (
                     <div className="slide-content fade-in">
-                        <ContactForm contact={contact} />
+                        <ContactForm contact={personalInfo} />
                     </div>
                 )}
 

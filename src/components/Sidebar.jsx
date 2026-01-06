@@ -3,13 +3,13 @@ import { FaDownload, FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaWhatsapp }
 import { MdEmail, MdLocationOn, MdCalendarToday } from 'react-icons/md';
 import './Sidebar.css';
 
-const Sidebar = ({ profile, skills, languages, social }) => {
+const Sidebar = ({ personalInfo, skills, languages }) => {
     return (
         <aside className="sidebar">
             <div className="sidebar-card profile-card">
                 <div className="profile-image-container">
-                    {profile.image ? (
-                        <img src={profile.image} alt={profile.name} className="profile-image" />
+                    {personalInfo.image ? (
+                        <img src={personalInfo.image} alt={personalInfo.full_name} className="profile-image" />
                     ) : (
                         <div className="profile-placeholder">
                             <span>Profile Img</span>
@@ -17,9 +17,9 @@ const Sidebar = ({ profile, skills, languages, social }) => {
                     )}
                 </div>
 
-                <h2 className="profile-name">{profile.fullName}</h2>
-                <p className="profile-email">{profile.email}</p>
-                <p className="profile-degree">{profile.degree}</p>
+                <h2 className="profile-name">{personalInfo.full_name}</h2>
+                <p className="profile-email">{personalInfo.email}</p>
+                <p className="profile-degree">{personalInfo.title}</p>
 
                 <a href="#" className="download-btn">
                     Download CV <span className="icon"><FaDownload /></span>
@@ -31,24 +31,39 @@ const Sidebar = ({ profile, skills, languages, social }) => {
                 <ul className="info-list">
                     <li>
                         <span className="label">Location</span>
-                        <span className="value">{profile.location}</span>
+                        <span className="value">{personalInfo.location}</span>
                     </li>
+                    {personalInfo.experience && (
+                        <li>
+                            <span className="label">Experience</span>
+                            <span className="value">{personalInfo.experience}</span>
+                        </li>
+                    )}
                     <li>
-                        <span className="label">Experience</span>
-                        <span className="value">{profile.experience}</span>
+                        <span className="label">Degree</span>
+                        <span className="value">{personalInfo.degree}</span>
                     </li>
                     <li>
                         <span className="label">Availability</span>
-                        <span className="value appointment-open">{profile.availability || 'Appointment Open'}</span>
+                        <span className="value appointment-open">{personalInfo.availability}</span>
                     </li>
                 </ul>
             </div>
 
             <div className="sidebar-card skills-card">
-                <h3>Skills</h3>
+                <h3>Technical Skills</h3>
                 <div className="skills-wrap">
-                    {skills.map((skill, index) => (
+                    {skills.technical && skills.technical.map((skill, index) => (
                         <span key={index} className="skill-tag">{skill}</span>
+                    ))}
+                </div>
+            </div>
+
+            <div className="sidebar-card skills-card">
+                <h3>Support & Admin</h3>
+                <div className="skills-wrap">
+                    {skills.support_administration && skills.support_administration.map((skill, index) => (
+                        <span key={index} className="skill-tag skill-tag-secondary">{skill}</span>
                     ))}
                 </div>
             </div>
@@ -64,16 +79,19 @@ const Sidebar = ({ profile, skills, languages, social }) => {
 
             <div className="sidebar-footer">
                 <div className="social-links">
-                    {social.linkedin && (
-                        <a href={social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    {personalInfo.linkedin && (
+                        <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <FaLinkedin />
                         </a>
                     )}
-                    {social.github && (
-                        <a href={social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    {personalInfo.github && (
+                        <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                             <FaGithub />
                         </a>
                     )}
+                    <a href={`mailto:${personalInfo.email}`} aria-label="Email">
+                        <MdEmail />
+                    </a>
                 </div>
             </div>
         </aside>

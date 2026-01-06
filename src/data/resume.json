@@ -1,61 +1,109 @@
 {
-    "profile": {
-        "name": "Karabo Nhlamulo",
-        "fullName": "Karabo Nhlamulo Magongwa",
-        "title": "Software Engineer (BScIT)",
-        "email": "sir.karabom@gmail.com",
-        "degree": "Bachelor of Science in Information Technology",
-        "summary": "BScIT graduate specializing in software engineering principles, systems support, and network infrastructure. Focused on designing scalable, modular solutions using clean code practices and formal architecture decisions.",
-        "location": "Pretoria, South Africa",
-        "experience": "Graduate / Junior",
-        "availability": "Appointment Open",
-        "image": "/assets/profile/profile-image.jpg"
-    },
-    "contact": {
+    "personal_info": {
+        "full_name": "Karabo Nhlamulo Magongwa",
+        "title": "Software Engineer (BSc IT)",
+        "degree": "BSc IT in Software Engineering",
         "email": "sir.karabom@gmail.com",
         "phone": "+27 71 727 9673",
-        "address": "105 Ossewa Avenue, Die Wilgers, 0184",
+        "location": "Pretoria, South Africa",
+        "image": "/assets/profile/profile-image.jpg",
+        "availability": "Open to Opportunities",
         "linkedin": "https://linkedin.com/in/karabo-magongwa",
         "github": "https://github.com/sir-karabo"
     },
-    "skills": [
-        "C#",
-        "Java",
-        "PHP",
-        "JavaScript",
-        "SQL",
-        "Python",
-        "ASP.NET Core",
-        "Node.js",
-        "React",
-        "Laravel",
-        "Git",
-        "Network Infrastructure"
-    ],
-    "languages": [
-        "English",
-        "Sepedi",
-        "Tswana",
-        "Xitsonga"
-    ],
-    "experience": [
+    "professional_summary": "BSc IT graduate with rigorous training in software engineering principles, distributed systems, and network infrastructure. Specializes in designing scalable, modular architectures using formal design patterns and clean code methodology.",
+    "core_skills": {
+        "technical": [
+            "C#",
+            "Java",
+            "PHP",
+            "JavaScript (ES6+)",
+            "SQL",
+            "Python",
+            "React",
+            "Laravel",
+            "Node.js",
+            "Tailwind CSS",
+            "TypeScript",
+            "Docker",
+            "Git",
+            "REST APIs",
+            "Linux"
+        ],
+        "support_administration": [
+            "Networking Fundamentals",
+            "Server Management",
+            "DevOps Workflows",
+            "System Deployment",
+            "Pipeline Automation",
+            "Troubleshooting"
+        ],
+        "soft_skills": [
+            "Technical Communication",
+            "Team Collaboration",
+            "Algorithmic Problem-Solving",
+            "System Architecture Planning",
+            "Adaptability"
+        ]
+    },
+    "professional_experience": [
         {
             "id": 1,
-            "role": "Junior Software Developer",
             "company": "Sonxit Pty Ltd",
-            "location": "Pretoria",
-            "period": "2022 - 2024",
-            "type": "Full-time",
-            "description": "Implemented modular software solutions and assisted in system support and network infrastructure maintenance. Collaborated in team environments to deliver maintainable products following formal engineering workflows."
+            "role": "Software Developer - Remote",
+            "period": "Feb 2019 – Nov 2024",
+            "location": "Randburg (Remote)",
+            "description": "Orchestrated the architectural migration of legacy systems to containerized microservices, enhancing scalability and deployment velocity. Engineered robust RESTful APIs in Laravel/PHP to support cross-platform React frontends, enforcing strict typing and automated testing protocols within a DevOps environment.",
+            "tech_stack": [
+                "Linux",
+                "Laravel",
+                "React",
+                "Docker",
+                "CI/CD"
+            ]
         },
         {
             "id": 2,
-            "role": "IT Systems Support Specialist",
-            "company": "The High Home Community",
-            "location": "Remote",
-            "period": "2018 - 2022",
-            "type": "Contract",
-            "description": "Managed infrastructure and provided technical support for software systems. Focused on system reliability and user engagement through optimized support protocols."
+            "company": "Sonxit Pty Ltd",
+            "role": "Software Developer - Hybrid",
+            "period": "Sep 2022 – Jan 2024",
+            "location": "Sandton",
+            "description": "Led the implementation of modular system design and pipeline automation. Conducted comprehensive code reviews and refactored codebase to adhere to SOLID principles, significantly reducing technical debt and improving system maintainability.",
+            "tech_stack": [
+                "REST APIs",
+                "React",
+                "TypeScript",
+                "MySQL",
+                "Git"
+            ]
+        },
+        {
+            "id": 3,
+            "company": "MDS Collivery",
+            "role": "Software Systems Developer",
+            "period": "Jan 2017 – Jul 2019",
+            "location": "Johannesburg",
+            "description": "Architected high-throughput logistics algorithms for real-time data processing. Implemented rigorous database schemas and multi-user optimization strategies to ensure data integrity and system availability under high load.",
+            "tech_stack": [
+                "PHP",
+                "Laravel",
+                "SQL",
+                "Docker",
+                "Kubernetes"
+            ]
+        },
+        {
+            "id": 4,
+            "company": "PMD MS Telecommunications",
+            "role": "Junior Network Engineer",
+            "period": "Jan 2016 – Dec 2017",
+            "location": "Centurion",
+            "description": "Administered enterprise network infrastructure, implementing security protocols and optimizing topology. Conducted systematic hardware diagnostics and configuration management.",
+            "tech_stack": [
+                "Networking",
+                "Hardware Configuration",
+                "System Administration"
+            ]
         }
     ],
     "education": [
@@ -63,17 +111,37 @@
             "id": 1,
             "institution": "Belgium Campus ITVersity",
             "degree": "BSc. in Information Technology",
+            "period": "2020 – 2024",
             "location": "South Africa",
-            "period": "2020 - 2024",
-            "focus": "Specialized in software engineering principles, SQL, PHP, C#, Node, and Java."
+            "focus": "Major in Software Engineering. Coursework: Advanced Algorithms, Database Systems, Distributed Computing."
         },
         {
             "id": 2,
             "institution": "Belgium Campus ITVersity",
             "degree": "Diploma in Software Development",
+            "period": "2013 – 2016",
             "location": "South Africa",
-            "period": "2013 - 2016",
-            "focus": "Focused on networking fundamentals, network design, and infrastructures with Business Intelligence."
+            "focus": "Network Design, Infrastructure Management, Business Intelligence."
+        }
+    ],
+    "languages": [
+        "English",
+        "Sepedi",
+        "Tswana",
+        "Xitsonga"
+    ],
+    "references": [
+        {
+            "name": "Mr Thoriso Maphala",
+            "role": "Software Engineer @ Capitec",
+            "linkedin": "https://www.linkedin.com/in/thoriso-maphala-386078ab",
+            "phone": "+27 84 623 5301"
+        },
+        {
+            "name": "Mr Andrew Mbeza",
+            "role": "Game Developer @ 24 Bit Games",
+            "linkedin": "https://www.linkedin.com/in/chisomo-mbeza-a56446124/",
+            "phone": "+27 72 180 8451"
         }
     ]
 }

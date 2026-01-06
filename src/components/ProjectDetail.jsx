@@ -10,6 +10,22 @@ const ProjectDetail = ({ project, projects = [], onBack, onNavigate }) => {
         window.scrollTo(0, 0);
     }, [project.id]);
 
+    // Scroll Animation Observer
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        elements.forEach(el => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, [project]);
+
     if (!project) return null;
 
     // Navigation Logic
@@ -30,7 +46,7 @@ const ProjectDetail = ({ project, projects = [], onBack, onNavigate }) => {
 
     return (
         <article className="project-detail-container">
-            <div className="detail-nav-bar">
+            <div className="detail-nav-bar animate-on-scroll">
                 <button className="back-btn" onClick={onBack}>
                     <MdArrowBack /> Back to Projects
                 </button>
@@ -49,7 +65,7 @@ const ProjectDetail = ({ project, projects = [], onBack, onNavigate }) => {
                 </div>
             </div>
 
-            <header className="detail-header">
+            <header className="detail-header animate-on-scroll">
                 <h1 className="detail-title">{project.title}</h1>
                 <div className="detail-meta">
                     <span>{project.year}</span>
@@ -60,7 +76,7 @@ const ProjectDetail = ({ project, projects = [], onBack, onNavigate }) => {
                 </div>
             </header>
 
-            <div className="detail-image">
+            <div className="detail-image animate-on-scroll">
                 {project.image ? (
                     <img src={project.image} alt={project.title} className="detail-img-cover" />
                 ) : (
@@ -71,23 +87,23 @@ const ProjectDetail = ({ project, projects = [], onBack, onNavigate }) => {
             </div>
 
             <div className="detail-content">
-                <section className="content-block">
+                <section className="content-block animate-on-scroll">
                     <h3>The Problem</h3>
                     <p>{project.problem}</p>
                 </section>
 
-                <section className="content-block">
+                <section className="content-block animate-on-scroll">
                     <h3>Approach & Solution</h3>
                     <p>{project.approach}</p>
                 </section>
 
-                <section className="content-block">
+                <section className="content-block animate-on-scroll">
                     <h3>The Outcome</h3>
                     <p>{project.outcome}</p>
                 </section>
 
                 {project.link && (
-                    <section className="content-block">
+                    <section className="content-block animate-on-scroll">
                         <h3>Project Link</h3>
                         <p>
                             <a href={project.link} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary-color)', textDecoration: 'underline' }}>
@@ -98,7 +114,7 @@ const ProjectDetail = ({ project, projects = [], onBack, onNavigate }) => {
                 )}
             </div>
 
-            <footer className="tech-section">
+            <footer className="tech-section animate-on-scroll">
                 <h3>Technologies Used</h3>
                 <div className="tech-list">
                     {project.techStack && project.techStack.map((tech, idx) => (
@@ -111,7 +127,7 @@ const ProjectDetail = ({ project, projects = [], onBack, onNavigate }) => {
 
             {/* Related Projects Section */}
             {relatedProjects.length > 0 && (
-                <section className="related-projects-section">
+                <section className="related-projects-section animate-on-scroll">
                     <h3>Related Projects</h3>
                     <div className="related-grid">
                         {relatedProjects.map(p => (

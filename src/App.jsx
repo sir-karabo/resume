@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from '@/components/Sidebar';
 import MainContent from '@/components/MainContent';
+import AdminDashboard from '@/components/AdminDashboard';
 
 const App = () => {
     const [resumeData, setResumeData] = useState(null);
     const [projectsData, setProjectsData] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [view, setView] = useState('main'); // 'main' or 'admin'
 
     useEffect(() => {
         const fetchData = async () => {
@@ -33,6 +35,14 @@ const App = () => {
         fetchData();
     }, []);
 
+    const handleProfileClick = () => {
+        setView('admin');
+    };
+
+    const handleBackToMain = () => {
+        setView('main');
+    };
+
     if (loading) {
         return <div className="loading-screen">Loading Profile...</div>;
     }
@@ -41,12 +51,21 @@ const App = () => {
         return <div className="error-screen">Failed to load content. Please check the backend connection.</div>;
     }
 
+    if (view === 'admin') {
+        return (
+            <div className="app-container" style={{ display: 'block' }}>
+                <AdminDashboard onBack={handleBackToMain} />
+            </div>
+        );
+    }
+
     return (
         <div className="app-container">
             <Sidebar
                 personalInfo={resumeData.personal_info}
                 skills={resumeData.core_skills}
                 languages={resumeData.languages}
+                onProfileClick={handleProfileClick}
             />
             <MainContent
                 personalInfo={resumeData.personal_info}

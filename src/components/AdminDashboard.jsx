@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './MainContent.css';
 
-const AdminDashboard = () => {
+const AdminDashboard = ({ onBack }) => {
     // Auth State
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [token, setToken] = useState(localStorage.getItem('adminToken'));
@@ -55,13 +55,14 @@ const AdminDashboard = () => {
         setToken(null);
         setIsAuthenticated(false);
         setCurrentSection(null);
+        if (onBack) onBack();
     };
 
     const fetchContent = async (key) => {
         setUpdateStatus('Loading...');
         setCurrentSection(key);
         try {
-            const res = await fetch(`/ api / data / ${key} `);
+            const res = await fetch(`/api/data/${key}`);
             if (res.ok) {
                 const data = await res.json();
                 setEditorContent(JSON.stringify(data, null, 4));
@@ -76,11 +77,11 @@ const AdminDashboard = () => {
         setUpdateStatus('Saving...');
         try {
             const json = JSON.parse(editorContent);
-            const res = await fetch(`/ api / data / ${currentSection} `, {
+            const res = await fetch(`/api/data/${currentSection}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token} `
+                    'Authorization': `Bearer ${token}`
                 },
                 body: JSON.stringify(json)
             });
@@ -138,7 +139,10 @@ const AdminDashboard = () => {
     if (!isAuthenticated) {
         return (
             <div className="section-container">
-                <h2 className="section-title">Admin Login</h2>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                    <h2 className="section-title" style={{ margin: 0 }}>Admin Login</h2>
+                    <button onClick={onBack} className="nav-btn" style={{ fontSize: '0.8rem', border: '1px solid var(--border-subtle)' }}>Back to Resume</button>
+                </div>
                 <div style={{ maxWidth: '400px', margin: '0 auto', background: '#f8f9fa', padding: '2rem', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
                     <form onSubmit={handleLogin} style={{ display: 'grid', gap: '1rem' }}>
                         <div>
@@ -175,7 +179,7 @@ const AdminDashboard = () => {
         <div className="section-container">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
                 <h2 className="section-title" style={{ margin: 0 }}>Admin Dashboard</h2>
-                <button onClick={handleLogout} className="nav-btn" style={{ fontSize: '0.8rem', border: '1px solid var(--border-subtle)' }}>Logout</button>
+                <button onClick={handleLogout} className="nav-btn" style={{ fontSize: '0.8rem', border: '1px solid var(--border-subtle)' }}>Logout & Exit</button>
             </div>
 
             <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>

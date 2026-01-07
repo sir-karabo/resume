@@ -3,11 +3,16 @@ import { FaDownload, FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaWhatsapp }
 import { MdEmail, MdLocationOn, MdCalendarToday } from 'react-icons/md';
 import './Sidebar.css';
 
-const Sidebar = ({ personalInfo, skills, languages }) => {
+const Sidebar = ({ personalInfo, skills, languages, onProfileClick }) => {
     return (
         <aside className="sidebar">
             <div className="sidebar-card profile-card">
-                <div className="profile-image-container">
+                <div
+                    className="profile-image-container"
+                    onClick={onProfileClick}
+                    style={{ cursor: 'pointer' }}
+                    title="Access Admin Dashboard"
+                >
                     {personalInfo.image ? (
                         <img src={personalInfo.image} alt={personalInfo.full_name} className="profile-image" />
                     ) : (

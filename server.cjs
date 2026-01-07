@@ -103,12 +103,15 @@ app.post('/api/data/:key', requireAuth, (req, res) => {
     const stmt = db.prepare('INSERT OR REPLACE INTO site_data (key, value) VALUES (?, ?)');
     stmt.run(key, value);
 
-    // Also update the file system for persistence in the repo (optional, but good for sync)
-    // Note: In a real production app we wouldn't write to src, but for this local tool it's helpful
+    // Also update the file system for persistence in the repo
     const filePath = path.join(__dirname, 'src', 'data', `${key}.json`);
-    fs.writeFileSync(filePath, JSON.stringify(req.body, null, 4));
-
-    res.json({ success: true });
+    try {
+        fs.writeFileSync(filePath, JSON.stringify(req.body, null, 4));
+        res.json({ success: true });
+    } catch (err) {
+        console.error('Error writing file:', err);
+        res.status(500).json({ error: 'Failed to save file' });
+    }
 });
 
 app.listen(PORT, () => {

@@ -52,7 +52,14 @@ const ExperienceTimeline = ({ experience, education }) => {
                                 <MdSchool />
                             </div>
                             <div className="timeline-content">
-                                <h4 className="role-title">{edu.degree}</h4>
+                                <div className="timeline-header">
+                                    {edu.logo && (
+                                        <div className="company-logo">
+                                            <img src={edu.logo} alt={`${edu.institution} Logo`} />
+                                        </div>
+                                    )}
+                                    <h4 className="role-title">{edu.degree}</h4>
+                                </div>
                                 <div className="timeline-meta">
                                     <span className="company">{edu.institution}</span>
                                     <span className="location">{edu.location}</span>

@@ -114,6 +114,7 @@
         {
             "id": 1,
             "institution": "Belgium Campus ITVersity",
+            "logo": "https://placehold.co/100x100/A5092A/FFFFFF?text=BC",
             "degree": "BSc. in Information Technology",
             "period": "2020 – 2024",
             "location": "South Africa",
@@ -122,10 +123,20 @@
         {
             "id": 2,
             "institution": "Belgium Campus ITVersity",
+            "logo": "https://placehold.co/100x100/A5092A/FFFFFF?text=BC",
             "degree": "Diploma in Software Development",
             "period": "2013 – 2016",
             "location": "South Africa",
             "focus": "Network Design, Infrastructure Management, Business Intelligence."
+        },
+        {
+            "id": 3,
+            "institution": "Willowridge High School",
+            "logo": "https://placehold.co/100x100/003366/FFFFFF?text=WHS",
+            "degree": "National Senior Certificate",
+            "period": "2008 – 2012",
+            "location": "Pretoria, South Africa",
+            "focus": "Matriculated with University Exemption."
         }
     ],
     "languages": [

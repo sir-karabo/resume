@@ -13,7 +13,12 @@
             "Python",
             "TensorFlow",
             "React Native"
-        ]
+        ],
+        "metrics": {
+            "price": "$15,000",
+            "quality": "Enterprise Grade",
+            "time": "12 Weeks"
+        }
     },
     {
         "id": 2,
@@ -29,7 +34,12 @@
             "Flutter",
             "Python",
             "OpenCV"
-        ]
+        ],
+        "metrics": {
+            "price": "$8,500",
+            "quality": "High Performance",
+            "time": "8 Weeks"
+        }
     },
     {
         "id": 3,
@@ -45,7 +55,12 @@
             "React Native",
             "Python",
             "Scikit-learn"
-        ]
+        ],
+        "metrics": {
+            "price": "$12,000",
+            "quality": "Algorithmic Precision",
+            "time": "10 Weeks"
+        }
     },
     {
         "id": 5,
@@ -61,7 +76,12 @@
             "React",
             "Node.js",
             "MongoDB"
-        ]
+        ],
+        "metrics": {
+            "price": "$20,000",
+            "quality": "Scalable Architecture",
+            "time": "16 Weeks"
+        }
     },
     {
         "id": 6,
@@ -77,7 +97,12 @@
             "React",
             "Redux",
             "Node.js"
-        ]
+        ],
+        "metrics": {
+            "price": "$10,000",
+            "quality": "Secure & Robust",
+            "time": "6 Weeks"
+        }
     },
     {
         "id": 7,
@@ -93,7 +118,12 @@
             "C#",
             ".NET",
             "Algorithms"
-        ]
+        ],
+        "metrics": {
+            "price": "Pro Bono",
+            "quality": "Educational Tool",
+            "time": "4 Weeks"
+        }
     },
     {
         "id": 10,
@@ -108,7 +138,12 @@
         "techStack": [
             "Java",
             "Swing"
-        ]
+        ],
+        "metrics": {
+            "price": "$5,000",
+            "quality": "Stable Desktop App",
+            "time": "8 Weeks"
+        }
     },
     {
         "id": 11,
@@ -123,7 +158,12 @@
         "techStack": [
             "Java",
             "Multi-threading"
-        ]
+        ],
+        "metrics": {
+            "price": "$7,500",
+            "quality": "High Security",
+            "time": "5 Weeks"
+        }
     },
     {
         "id": 15,
@@ -139,6 +179,11 @@
             "PHP",
             "MySQL",
             "MVC"
-        ]
+        ],
+        "metrics": {
+            "price": "$18,000",
+            "quality": "Custom Framework",
+            "time": "14 Weeks"
+        }
     }
 ]

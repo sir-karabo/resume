@@ -87,6 +87,21 @@ const ProjectDetail = ({ project, projects = [], onBack, onNavigate }) => {
             </div>
 
             <div className="detail-content">
+                <div className="metrics-grid animate-on-scroll">
+                    <div className="metric-card">
+                        <span className="metric-label">Investment</span>
+                        <span className="metric-value">{project.metrics?.price || 'Confidential'}</span>
+                    </div>
+                    <div className="metric-card">
+                        <span className="metric-label">Quality Standard</span>
+                        <span className="metric-value">{project.metrics?.quality || 'High Assurance'}</span>
+                    </div>
+                    <div className="metric-card">
+                        <span className="metric-label">Timeline</span>
+                        <span className="metric-value">{project.metrics?.time || 'Variable'}</span>
+                    </div>
+                </div>
+
                 <section className="content-block animate-on-scroll">
                     <h3>The Problem</h3>
                     <p>{project.problem}</p>

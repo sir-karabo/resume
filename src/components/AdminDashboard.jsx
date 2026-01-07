@@ -1,6 +1,7 @@
-
-import React, { useState } from 'react';
-import './MainContent.css';
+import React, { useState, useEffect } from 'react';
+import './AdminDashboard.css';
+import { MdDashboard, MdEditDocument, MdWork, MdExitToApp, MdArrowBack } from 'react-icons/md';
+import { FaRobot, FaPenFancy } from 'react-icons/fa';
 
 const AdminDashboard = ({ onBack }) => {
     // Auth State
@@ -10,8 +11,8 @@ const AdminDashboard = ({ onBack }) => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    // State for Tabs
-    const [currentSection, setCurrentSection] = useState(null); // 'resume', 'projects', 'ai-jobs'
+    // State for Sections
+    const [currentSection, setCurrentSection] = useState(null); // null (grid), 'resume', 'projects', 'ai-jobs'
 
     // Editor State
     const [editorContent, setEditorContent] = useState('');
@@ -22,7 +23,7 @@ const AdminDashboard = ({ onBack }) => {
     const [jobResults, setJobResults] = useState(null);
 
     // Check auth on load
-    React.useEffect(() => {
+    useEffect(() => {
         if (token) {
             setIsAuthenticated(true);
         }
@@ -138,197 +139,193 @@ const AdminDashboard = ({ onBack }) => {
 
     if (!isAuthenticated) {
         return (
-            <div className="section-container">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-                    <h2 className="section-title" style={{ margin: 0 }}>Admin Login</h2>
-                    <button onClick={onBack} className="nav-btn" style={{ fontSize: '0.8rem', border: '1px solid var(--border-subtle)' }}>Back to Resume</button>
-                </div>
-                <div style={{ maxWidth: '400px', margin: '0 auto', background: '#f8f9fa', padding: '2rem', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
-                    <form onSubmit={handleLogin} style={{ display: 'grid', gap: '1rem' }}>
-                        <div>
-                            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Username</label>
-                            <input
-                                type="text"
-                                value={username}
-                                onChange={(e) => setUsername(e.target.value)}
-                                className="form-input"
-                                style={{ width: '100%' }}
-                                placeholder="Enter admin username"
-                            />
-                        </div>
-                        <div>
-                            <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500' }}>Password</label>
-                            <input
-                                type="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                className="form-input"
-                                style={{ width: '100%' }}
-                                placeholder="Enter admin password"
-                            />
-                        </div>
-                        {error && <p style={{ color: 'red', fontSize: '0.9rem' }}>{error}</p>}
-                        <button type="submit" className="submit-btn" style={{ width: '100%' }}>Login</button>
+            <div className="auth-container">
+                <div className="auth-card">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
+                        <h2 className="admin-title" style={{ fontSize: '1.5rem', margin: 0 }}>Admin Access</h2>
+                        <button onClick={onBack} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-light)' }}>
+                            <MdArrowBack size={20} />
+                        </button>
+                    </div>
+                    <form onSubmit={handleLogin}>
+                        <input
+                            type="text"
+                            className="auth-input"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            placeholder="Username"
+                        />
+                        <input
+                            type="password"
+                            className="auth-input"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            placeholder="Password"
+                        />
+                        {error && <p style={{ color: 'red', fontSize: '0.9rem', marginBottom: '1rem' }}>{error}</p>}
+                        <button type="submit" className="admin-btn">Login</button>
                     </form>
                 </div>
             </div>
         );
     }
 
+    // MAIN DASHBOARD LAYOUT
     return (
-        <div className="section-container">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-                <h2 className="section-title" style={{ margin: 0 }}>Admin Dashboard</h2>
-                <button onClick={handleLogout} className="nav-btn" style={{ fontSize: '0.8rem', border: '1px solid var(--border-subtle)' }}>Logout & Exit</button>
-            </div>
+        <div className="admin-layout">
 
-            <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
-                <button
-                    className={`nav - btn ${currentSection === 'resume' ? 'active' : ''} `}
-                    onClick={() => fetchContent('resume')}
-                    style={{ border: '1px solid var(--border-subtle)', padding: '0.5rem 1rem' }}
-                >
-                    Edit Resume
-                </button>
-                <button
-                    className={`nav - btn ${currentSection === 'projects' ? 'active' : ''} `}
-                    onClick={() => fetchContent('projects')}
-                    style={{ border: '1px solid var(--border-subtle)', padding: '0.5rem 1rem' }}
-                >
-                    Blog / Edit Projects
-                </button>
-                <button
-                    className={`nav - btn ${currentSection === 'ai-jobs' ? 'active' : ''} `}
-                    onClick={() => { setCurrentSection('ai-jobs'); setUpdateStatus(''); }}
-                    style={{ border: '1px solid var(--border-subtle)', padding: '0.5rem 1rem' }}
-                >
-                    AI Job Matcher
-                </button>
-            </div>
+            {/* Sidebar Navigation */}
+            <aside className="admin-sidebar">
+                <div style={{ marginBottom: '3rem' }}>
+                    <h2 className="admin-title" style={{ fontSize: '1.5rem' }}>Control Panel</h2>
+                </div>
 
-            {/* AI JOB MATCHER SECTION */}
-            {currentSection === 'ai-jobs' && (
-                <div style={{ animation: 'fadeIn 0.3s' }}>
-                    <div style={{
-                        background: '#f8f9fa',
-                        padding: '2rem',
-                        borderRadius: '8px',
-                        border: '1px solid var(--border-subtle)',
-                        textAlign: 'center'
-                    }}>
-                        <h3 style={{ marginBottom: '1rem', color: 'var(--text-main)' }}>Find Your Perfect Role</h3>
-                        <p style={{ marginBottom: '2rem', color: 'var(--text-secondary)' }}>
-                            Our AI analyzes your portfolio against live job boards to find the best opportunities for you.
+                <nav>
+                    <div className={`admin-nav-item ${!currentSection ? 'active' : ''}`} onClick={() => setCurrentSection(null)}>
+                        <MdDashboard size={20} /> Dashboard
+                    </div>
+                    <div className={`admin-nav-item ${currentSection === 'resume' ? 'active' : ''}`} onClick={() => fetchContent('resume')}>
+                        <MdEditDocument size={20} /> Edit Resume
+                    </div>
+                    <div className={`admin-nav-item ${currentSection === 'projects' ? 'active' : ''}`} onClick={() => fetchContent('projects')}>
+                        <FaPenFancy size={18} /> Blog / Projects
+                    </div>
+                    <div className={`admin-nav-item ${currentSection === 'ai-jobs' ? 'active' : ''}`} onClick={() => { setCurrentSection('ai-jobs'); setUpdateStatus(''); }}>
+                        <FaRobot size={18} /> AI Job Matcher
+                    </div>
+                </nav>
+
+                <div style={{ marginTop: 'auto' }}>
+                    <div className="admin-nav-item" onClick={handleLogout} style={{ color: 'var(--text-light)' }}>
+                        <MdExitToApp size={20} /> Logout & Exit
+                    </div>
+                </div>
+            </aside>
+
+            {/* Main Content Area */}
+            <main className="admin-content">
+
+                {/* 1. DASHBOARD HOME (GRID) */}
+                {!currentSection && (
+                    <div className="fade-in">
+                        <header className="admin-header">
+                            <div>
+                                <h1 className="admin-title">Welcome back, Admin.</h1>
+                                <p style={{ color: 'var(--text-secondary)' }}>Select a tool to manage your portfolio.</p>
+                            </div>
+                        </header>
+
+                        <div className="admin-grid">
+                            <div className="admin-card" onClick={() => fetchContent('resume')}>
+                                <MdEditDocument className="card-icon" />
+                                <h3 className="card-title">Resume Editor</h3>
+                                <p className="card-desc">Update your professional experience, education, and skills in real-time.</p>
+                            </div>
+
+                            <div className="admin-card" onClick={() => fetchContent('projects')}>
+                                <FaPenFancy className="card-icon" />
+                                <h3 className="card-title">Project Blog</h3>
+                                <p className="card-desc">Write case studies, upload project details, and manage your portfolio blog.</p>
+                            </div>
+
+                            <div className="admin-card" onClick={() => setCurrentSection('ai-jobs')}>
+                                <FaRobot className="card-icon" />
+                                <h3 className="card-title">AI Job Matcher</h3>
+                                <p className="card-desc">Let AI analyze market trends and find jobs that match your profile.</p>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* 2. EDITORS (RESUME & PROJECTS) */}
+                {(currentSection === 'resume' || currentSection === 'projects') && (
+                    <div className="fade-in">
+                        <header className="admin-header">
+                            <div>
+                                <h2 className="admin-title">{currentSection === 'resume' ? 'Resume Data' : 'Project Blog'}</h2>
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                <span style={{
+                                    color: updateStatus.includes('Error') || updateStatus.includes('Invalid') ? '#d32f2f' : '#388e3c',
+                                    fontWeight: '500'
+                                }}>
+                                    {updateStatus}
+                                </span>
+                                <button onClick={handleSave} className="admin-btn" style={{ width: 'auto', padding: '0.8rem 2rem' }}>
+                                    Save Changes
+                                </button>
+                            </div>
+                        </header>
+
+                        <textarea
+                            className="json-editor"
+                            value={editorContent}
+                            onChange={(e) => setEditorContent(e.target.value)}
+                        />
+                        <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: 'var(--text-light)' }}>
+                            * You are editing the raw {currentSection} JSON data. Ensure syntax is correct before saving.
                         </p>
+                    </div>
+                )}
 
-                        {!jobResults && !isSearchingJobs && (
-                            <button onClick={handleAIJobSearch} className="submit-btn" style={{ fontSize: '1.1rem', padding: '0.8rem 2rem' }}>
-                                🤖 Analyze & Find Jobs
-                            </button>
-                        )}
+                {/* 3. AI JOB MATCHER */}
+                {currentSection === 'ai-jobs' && (
+                    <div className="fade-in">
+                        <header className="admin-header">
+                            <h2 className="admin-title">AI Job Intelligence</h2>
+                        </header>
 
-                        {isSearchingJobs && (
-                            <div style={{ color: 'var(--primary-color)', fontWeight: 'bold' }}>
-                                Scanning 50+ Job Boards... Analyzing Keywords... Matching Skills...
+                        <div style={{
+                            background: 'var(--bg-card)',
+                            padding: '3rem',
+                            borderRadius: 'var(--radius-lg)',
+                            border: '1px solid var(--border-subtle)',
+                            textAlign: 'center',
+                            marginBottom: '2rem'
+                        }}>
+                            <FaRobot size={48} style={{ color: 'var(--accent-green)', marginBottom: '1rem' }} />
+                            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', fontWeight: '400' }}>Find Your Next Role</h3>
+                            <p style={{ maxWidth: '600px', margin: '0 auto 2rem', color: 'var(--text-secondary)' }}>
+                                Our advanced AI algorithm scans over 50 job boards to find positions that match your specific skill set and experience level.
+                            </p>
+
+                            {!isSearchingJobs && !jobResults && (
+                                <button onClick={handleAIJobSearch} className="admin-btn" style={{ width: 'auto', padding: '1rem 3rem' }}>
+                                    Start Analysis
+                                </button>
+                            )}
+                            {isSearchingJobs && (
+                                <div style={{ color: 'var(--accent-green)', fontWeight: 'bold' }}>
+                                    Processing...
+                                </div>
+                            )}
+                        </div>
+
+                        {jobResults && (
+                            <div className="admin-grid">
+                                {jobResults.map(job => (
+                                    <div key={job.id} className="admin-card" style={{ cursor: 'default' }}>
+                                        <div style={{ flex: 1 }}>
+                                            <h4 style={{ color: 'var(--accent-green)', fontSize: '1.1rem', marginBottom: '0.5rem' }}>{job.title}</h4>
+                                            <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>@{job.company}</div>
+                                            <p className="card-desc" style={{ marginBottom: '1rem' }}>{job.reason}</p>
+                                        </div>
+                                        <div style={{ width: '100%', marginTop: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                            <span style={{ fontSize: '0.85rem', fontWeight: 'bold', background: '#e0f2f1', color: '#004d40', padding: '4px 8px', borderRadius: '4px' }}>
+                                                {job.matchScore}% Match
+                                            </span>
+                                            <a href={`mailto:${job.email}`} style={{ textDecoration: 'none', color: 'var(--font-body)', fontSize: '0.9rem', fontWeight: '500', borderBottom: '1px solid currentColor' }}>
+                                                Email HR &rarr;
+                                            </a>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         )}
                     </div>
+                )}
 
-                    {jobResults && (
-                        <div style={{ marginTop: '2rem', display: 'grid', gap: '1rem' }}>
-                            <h4 style={{ color: 'var(--text-main)' }}>Top Recommendations:</h4>
-                            {jobResults.map(job => (
-                                <div key={job.id} style={{
-                                    padding: '1.5rem',
-                                    border: '1px solid var(--border-subtle)',
-                                    borderRadius: '8px',
-                                    background: 'white',
-                                    display: 'flex',
-                                    justifyContent: 'space-between',
-                                    alignItems: 'center',
-                                    flexWrap: 'wrap',
-                                    gap: '1rem'
-                                }}>
-                                    <div style={{ flex: 1 }}>
-                                        <h4 style={{ margin: '0 0 0.5rem 0', color: 'var(--primary-color)' }}>{job.title}</h4>
-                                        <div style={{ fontWeight: 'bold', fontSize: '0.9rem', marginBottom: '0.5rem' }}>@{job.company}</div>
-                                        <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', margin: 0 }}>{job.reason}</p>
-                                    </div>
-                                    <div style={{ textAlign: 'right' }}>
-                                        <div style={{
-                                            display: 'inline-block',
-                                            background: '#e6fffa',
-                                            color: '#004d40',
-                                            padding: '0.3rem 0.8rem',
-                                            borderRadius: '20px',
-                                            fontSize: '0.85rem',
-                                            fontWeight: 'bold',
-                                            marginBottom: '0.5rem'
-                                        }}>
-                                            {job.matchScore}% Match
-                                        </div>
-                                        <br />
-                                        <a href={`mailto:${job.email} `} className="submit-btn" style={{
-                                            display: 'inline-block',
-                                            textDecoration: 'none',
-                                            fontSize: '0.85rem',
-                                            padding: '0.5rem 1rem'
-                                        }}>
-                                            Email HR Manager
-                                        </a>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    )}
-                </div>
-            )}
-
-            {/* CONTENT EDITORS */}
-            {(currentSection === 'resume' || currentSection === 'projects') && (
-                <div style={{ animation: 'fadeIn 0.3s' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                        <h3>Editing {currentSection === 'resume' ? 'Resume Data' : 'Project Blog Posts'}</h3>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                            <span style={{ color: updateStatus.includes('Error') || updateStatus.includes('Invalid') ? 'red' : 'green' }}>
-                                {updateStatus}
-                            </span>
-                            <button onClick={handleSave} className="submit-btn">Save Changes</button>
-                        </div>
-                    </div>
-                    <textarea
-                        value={editorContent}
-                        onChange={(e) => setEditorContent(e.target.value)}
-                        style={{
-                            width: '100%',
-                            height: '500px',
-                            fontFamily: 'monospace',
-                            fontSize: '14px',
-                            padding: '1rem',
-                            border: '1px solid var(--border-subtle)',
-                            borderRadius: '4px',
-                            lineHeight: '1.5',
-                            resize: 'vertical'
-                        }}
-                    />
-                    <p style={{ marginTop: '1rem', fontSize: '0.85rem', color: 'var(--text-light)' }}>
-                        Hint: You are editing the raw data. New projects will automatically appear in the Case Studies tab.
-                    </p>
-                </div>
-            )}
-
-            {!currentSection && (
-                <div style={{
-                    padding: '3rem',
-                    textAlign: 'center',
-                    background: '#f8f9fa',
-                    borderRadius: '8px',
-                    border: '1px dashed var(--border-subtle)',
-                    color: 'var(--text-secondary)'
-                }}>
-                    Select a tool from the menu above to get started.
-                </div>
-            )}
+            </main>
         </div>
     );
 };

@@ -1,231 +1,120 @@
-[
-    {
-        "id": 1,
-        "title": "Smart Housing Application",
-        "category": "Capstone & AI",
-        "image": "/assets/projects/project-1.jpg",
-        "year": "2024",
-        "role": "Lead Developer",
-        "problem": "Real-time property valuation and market trend analysis is often inaccessible to average buyers.",
-        "approach": "Integrated predictive AI models (TensorFlow) within a detailed mobile interface to deliver instant, data-driven property insights.",
-        "outcome": "Demonstrated proficiency in integrating machine learning pipelines with mobile application architectures.",
-        "techStack": [
-            "Python",
-            "TensorFlow",
-            "React Native"
-        ],
-        "metrics": {
-            "price": "$15,000",
-            "quality": "Enterprise Grade",
-            "time": "12 Weeks"
-        }
+{
+    "personal_info": {
+        "full_name": "Karabo Nhlamulo Magongwa",
+        "title": "Software Engineer",
+        "degree": "Bachelor of Science in Information Technology",
+        "email": "sir.karabom@gmail.com",
+        "phone": "+27 71 727 9673",
+        "location": "South Africa",
+        "image": "/assets/profile/profile-image.jpg",
+        "availability": "Available for Full-time & Contract Roles",
+        "linkedin": "https://linkedin.com/in/karabo-magongwa",
+        "github": "https://github.com/sir-karabo"
     },
-    {
-        "id": 2,
-        "title": "Business Invoicing System",
-        "category": "Capstone & AI",
-        "image": "/assets/projects/project-2.jpg",
-        "year": "2024",
-        "role": "Full Stack Engineer",
-        "problem": "Manual invoice processing lacks efficiency and is prone to human error in small-scale operations.",
-        "approach": "Engineered an OCR-enabled mobile solution utilizing OpenCV for automated text extraction and categorization.",
-        "outcome": "Validated the viability of automated financial data processing on mobile platforms.",
-        "techStack": [
-            "Flutter",
-            "Python",
-            "OpenCV"
+    "professional_summary": "Software Engineer with a strong foundation in structured system design, clean architecture, and disciplined development workflows. I focus on building solutions that are reliable, maintainable, and aligned to long-term business requirements. With experience across academic and professional environments, I apply consistent engineering principles—clarity in design, predictability in execution, and efficiency in delivery. Known for a calm, analytical approach to problem-solving and the ability to translate complex requirements into stable, production-ready software.",
+    "core_skills": {
+        "technical": [
+            "C# (OOP, MVC, API Development)",
+            "Java (Enterprise Patterns)",
+            "Python (Automation & Scripting)",
+            "PHP & Laravel (Backend Architecture)",
+            "JavaScript (ES6+, Component-Based Design)",
+            "ASP.NET & ASP.NET Core",
+            "React (State Management & UI Logic)",
+            "SQL Server & MySQL (Optimized Querying)",
+            "REST APIs (Scalable Integrations)",
+            "Git (Structured Version Control)"
         ],
-        "metrics": {
-            "price": "$8,500",
-            "quality": "High Performance",
-            "time": "8 Weeks"
-        }
+        "support_administration": [
+            "Object-Oriented Design Principles",
+            "Clean Code & Pattern-Based Architecture",
+            "System Design & Data Flow Structuring",
+            "Agile/Scrum Collaboration",
+            "Technical Documentation & Standards"
+        ],
+        "soft_skills": [
+            "Clear and Structured Technical Communication",
+            "Collaborative Problem-Solving",
+            "Logical and Analytical Thinking",
+            "Reliable Task Execution",
+            "Adaptability and Continuous Learning"
+        ]
     },
-    {
-        "id": 3,
-        "title": "Dietary Recommendation Engine",
-        "category": "Capstone & AI",
-        "image": "/assets/projects/project-3.jpg",
-        "year": "2024",
-        "role": "Algorithm Developer",
-        "problem": "Generic dietary planning lacks personalization based on dynamic health data.",
-        "approach": "Built a recommendation engine using Scikit-learn to analyze user preference vectors and suggest optimal meal plans.",
-        "outcome": "Achieved high accuracy in user preference matching through algorithmic optimization.",
-        "techStack": [
-            "React Native",
-            "Python",
-            "Scikit-learn"
-        ],
-        "metrics": {
-            "price": "$12,000",
-            "quality": "Algorithmic Precision",
-            "time": "10 Weeks"
+    "professional_experience": [
+        {
+            "id": 1,
+            "company": "Sonxit Pty Ltd",
+            "logo": "https://placehold.co/100x100/000000/FFFFFF?text=Sonxit",
+            "role": "Junior Software Developer",
+            "period": "Jun 2022 – Jun 2024",
+            "location": "Sandton (Remote)",
+            "description": "Contributed to the development and maintenance of full-stack application features using Laravel, MERN, and structured MVC patterns. Applied clean architecture principles to improve system modularity and reduce technical debt. Strengthened API integrations for logistics operations and supported team workflows through disciplined version control, structured documentation, and consistent communication. Maintained a focus on platform reliability, predictable behaviour, and maintainable codebases.",
+            "tech_stack": [
+                "Laravel",
+                "MERN Stack",
+                "MVC",
+                "API Integration",
+                "Version Control"
+            ]
+        },
+        {
+            "id": 2,
+            "company": "Sandi",
+            "logo": "https://placehold.co/100x100/000000/FFFFFF?text=Sandi",
+            "role": "Software Developer",
+            "period": "Jun 2019 – Jun 2021",
+            "location": "Sandburg (Hybrid)",
+            "description": "Supported server-side application development with a focus on architectural consistency, reliability, and maintainable coding practices. Participated in code reviews to ensure clean logic, stable deployments, and adherence to standards. Worked with clients and team leads to translate requirements into technical tasks, ensuring clarity in execution and reducing development ambiguity.",
+            "tech_stack": [
+                "Server-side Development",
+                "Code Reviews",
+                "API Integration",
+                "Requirement Analysis"
+            ]
         }
-    },
-    {
-        "id": 5,
-        "title": "Interactive Content Platform",
-        "category": "Full-Stack Engineering",
-        "image": "/assets/projects/project-5.jpg",
-        "year": "2023",
-        "role": "System Architect",
-        "problem": "Need for a modular, scalable CMS to handle dynamic content serving.",
-        "approach": "Implemented a MERN stack solution focusing on database schema normalization and efficient API response times.",
-        "outcome": "Delivered a secure, high-performance content delivery system.",
-        "techStack": [
-            "React",
-            "Node.js",
-            "MongoDB"
-        ],
-        "metrics": {
-            "price": "$20,000",
-            "quality": "Scalable Architecture",
-            "time": "16 Weeks"
+    ],
+    "education": [
+        {
+            "id": 1,
+            "institution": "Belgium Campus ITVersity",
+            "logo": "https://placehold.co/100x100/A5092A/FFFFFF?text=BC",
+            "degree": "BSc. in Information Technology",
+            "period": "2020 – 2024",
+            "location": "South Africa",
+            "focus": "Software Engineering major with emphasis on algorithms, databases, structured programming, and distributed computing. Developed a disciplined engineering approach grounded in analysis, system architecture, and sustainable code design."
+        },
+        {
+            "id": 2,
+            "institution": "Belgium Campus ITVersity",
+            "logo": "https://placehold.co/100x100/A5092A/FFFFFF?text=BC",
+            "degree": "Diploma in Software Development",
+            "period": "2013 – 2016",
+            "location": "South Africa",
+            "focus": "Training in network fundamentals, infrastructure configuration, and business intelligence systems, providing a strong base for understanding real-world system environments and technical ecosystems."
+        },
+        {
+            "id": 3,
+            "institution": "Willowridge High School",
+            "logo": "https://placehold.co/100x100/003366/FFFFFF?text=WHS",
+            "degree": "National Senior Certificate",
+            "period": "2008 – 2012",
+            "location": "Pretoria, South Africa",
+            "focus": "Completed with University Exemption."
         }
-    },
-    {
-        "id": 6,
-        "title": "E-Commerce State Manager",
-        "category": "Full-Stack Engineering",
-        "image": "/assets/projects/project-6.jpg",
-        "year": "2023",
-        "role": "Lead Developer",
-        "problem": "Managing complex state in large-scale retail applications requires robust patterns.",
-        "approach": "Designed a Redux-managed state architecture to handle cart persistence and transaction flows securely.",
-        "outcome": "Showcased advanced state management patterns and secure payment gateway integration.",
-        "techStack": [
-            "React",
-            "Redux",
-            "Node.js"
-        ],
-        "metrics": {
-            "price": "$10,000",
-            "quality": "Secure & Robust",
-            "time": "6 Weeks"
+    ],
+    "languages": [
+        "English",
+        "Sepedi",
+        "Tswana",
+        "Xitsonga"
+    ],
+    "references": [
+        {
+            "name": "Professional References",
+            "role": "Available upon request",
+            "github": "https://github.com/mr-karabonhlamulo",
+            "linkedin": "https://www.linkedin.com/in/mr-karabonhlamulo",
+            "phone": "+27 67 252 1424"
         }
-    },
-    {
-        "id": 7,
-        "title": "Search Algorithm Visualizer",
-        "category": "Computer Science Principles",
-        "image": "/assets/projects/project-7.jpg",
-        "year": "2022",
-        "role": "Individual",
-        "problem": "Visualizing A* and Dijkstra algorithms for educational purposes.",
-        "approach": "Developed a C# application to render graph traversal algorithms in real-time.",
-        "outcome": "Provided a clear visual demonstration of algorithmic efficiency and pathfinding logic.",
-        "techStack": [
-            "C#",
-            ".NET",
-            "Algorithms"
-        ],
-        "metrics": {
-            "price": "Pro Bono",
-            "quality": "Educational Tool",
-            "time": "4 Weeks"
-        }
-    },
-    {
-        "id": 10,
-        "title": "Library Automation System",
-        "category": "Java Systems",
-        "image": "/assets/projects/project-10.jpg",
-        "year": "2021",
-        "role": "Individual",
-        "problem": "Demonstrating persistent data management in desktop applications.",
-        "approach": "Built a Java Swing application utilizing File I/O and object serialization for inventory tracking.",
-        "outcome": "Created a robust, crash-resistant system handling complex inventory states.",
-        "techStack": [
-            "Java",
-            "Swing"
-        ],
-        "metrics": {
-            "price": "$5,000",
-            "quality": "Stable Desktop App",
-            "time": "8 Weeks"
-        }
-    },
-    {
-        "id": 11,
-        "title": "Secure Banking Simulator",
-        "category": "Java Systems",
-        "image": "/assets/projects/project-11.jpg",
-        "year": "2021",
-        "role": "Individual",
-        "problem": "Simulating secure concurrent transactions in a banking environment.",
-        "approach": "Implemented a multi-threaded system with strict encapsulation and transaction logging.",
-        "outcome": "Validated understanding of thread safety and data integrity principles.",
-        "techStack": [
-            "Java",
-            "Multi-threading"
-        ],
-        "metrics": {
-            "price": "$7,500",
-            "quality": "High Security",
-            "time": "5 Weeks"
-        }
-    },
-    {
-        "id": 15,
-        "title": "MVC E-Commerce Architecture",
-        "category": "PHP Systems",
-        "image": "/assets/projects/project-15.jpg",
-        "year": "2022",
-        "role": "Backend Developer",
-        "problem": "Understanding the MVC pattern through raw implementation.",
-        "approach": "Built a custom MVC framework in PHP to separate business logic, data access, and presentation layers.",
-        "outcome": "Deepened understanding of architectural patterns and separation of concerns.",
-        "techStack": [
-            "PHP",
-            "MySQL",
-            "MVC"
-        ],
-        "metrics": {
-            "price": "$18,000",
-            "quality": "Custom Framework",
-            "time": "14 Weeks"
-        }
-    },
-    {
-        "id": 20,
-        "title": "Student Information Management System",
-        "category": "Academic Project",
-        "image": "https://placehold.co/600x400/003366/FFFFFF?text=Student+System",
-        "year": "2023",
-        "role": "Individual Project",
-        "problem": "Manual handling of student records resulted in data inconsistency and inefficiencies.",
-        "approach": "Designed a web-based system using MVC principles with role-based access and relational database design.",
-        "outcome": "Improved data integrity and provided a structured foundation for administrative automation.",
-        "techStack": [
-            "MVC",
-            "Relational Database",
-            "Web Architecture"
-        ],
-        "metrics": {
-            "price": "Academic",
-            "quality": "Structured Design",
-            "time": "Semester Project"
-        }
-    },
-    {
-        "id": 21,
-        "title": "Inventory Management System",
-        "category": "Coursework Project",
-        "image": "https://placehold.co/600x400/004d40/FFFFFF?text=Inventory+System",
-        "year": "2022",
-        "role": "Team Project",
-        "problem": "Small-scale inventory processes lacked visibility and control.",
-        "approach": "Built a CRUD-based application with reporting features and API integration.",
-        "outcome": "Demonstrated understanding of system workflows, validation, and data persistence.",
-        "techStack": [
-            "CRUD Operations",
-            "API Integration",
-            "Reporting"
-        ],
-        "metrics": {
-            "price": "Coursework",
-            "quality": "Functional Prototype",
-            "time": "Term Project"
-        }
-    }
-]
+    ]
+}

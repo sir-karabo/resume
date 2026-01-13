@@ -7,40 +7,37 @@
         "phone": "+27 71 727 9673",
         "location": "South Africa",
         "image": "/assets/profile/profile-image.jpg",
-        "availability": "Open to Opportunities",
+        "availability": "Available for Full-time & Contract Roles",
         "linkedin": "https://linkedin.com/in/karabo-magongwa",
         "github": "https://github.com/sir-karabo"
     },
-    "professional_summary": "BSc IT graduate with strong foundations in software engineering principles, system design, and web application development. Proven ability to design, develop, and optimise scalable solutions through structured academic and professional experience, with a focus on reliability, efficiency, and clean architecture.",
+    "professional_summary": "Software Engineer with strong foundations in structured system design, clean architecture, and scalable web development. I apply disciplined engineering principles—clarity in design, predictable execution, and efficient delivery—to build reliable and maintainable software. Experienced in developing both front-end and back-end features using modern frameworks, integrating APIs, and contributing to modular architectures. Known for analytical problem-solving, calm execution under pressure, and the ability to turn complex requirements into stable solutions.",
     "core_skills": {
         "technical": [
-            "C#",
-            "Java",
-            "Python",
-            "PHP",
-            "JavaScript",
-            "ASP.NET",
-            "ASP.NET Core",
-            "Laravel",
-            "React",
-            "SQL Server",
-            "MySQL",
-            "Git",
-            "REST APIs",
-            "MVC Architecture"
+            "C# (OOP, MVC, API Development)",
+            "Java (Enterprise Patterns)",
+            "Python (Automation & Scripting)",
+            "PHP & Laravel (Backend Architecture)",
+            "JavaScript (ES6+, Component-Based Design)",
+            "ASP.NET & ASP.NET Core",
+            "React (UI Logic, State Management)",
+            "SQL Server & MySQL",
+            "REST API Development",
+            "Git Version Control"
         ],
         "support_administration": [
-            "Object-Oriented Programming",
-            "Clean Code Principles",
-            "System Design",
-            "Agile Development"
+            "Object-Oriented Design Principles",
+            "Clean Code & Pattern-Based Architecture",
+            "System Design & Data Flow Structuring",
+            "Agile/Scrum Project Collaboration",
+            "Technical Documentation & Standards"
         ],
         "soft_skills": [
-            "Technical Communication",
-            "Team Collaboration",
-            "Algorithmic Problem-Solving",
-            "System Architecture Planning",
-            "Adaptability"
+            "Structured Technical Communication",
+            "Collaborative Problem-Solving",
+            "Analytical Thinking",
+            "Reliable Task Completion",
+            "Adaptability and Continuous Learning"
         ]
     },
     "professional_experience": [
@@ -51,26 +48,51 @@
             "role": "Junior Software Developer",
             "period": "Jun 2022 – Jun 2024",
             "location": "Sandton (Remote)",
-            "description": "Designed and developed front-end and back-end features using MERN and Laravel stacks. Contributed to scalable MVC-based architecture improvements to streamline feature delivery. Collaborated within agile teams to enhance platform reliability and maintainability. Integrated APIs to support courier service platform functionality.",
+            "description": "Developed and maintained full-stack application features using Laravel, React, and Node.js. Contributed to improving system structure through modular MVC patterns and clean architecture principles. Integrated third-party APIs to support logistics and courier operations. Worked within an Agile workflow, ensuring predictable delivery and stable deployments. Maintained a disciplined version control process using Git and documented technical changes to improve team communication and reduce ambiguity.",
             "tech_stack": [
                 "Laravel",
-                "MERN Stack",
-                "MVC",
-                "API Integration"
+                "React",
+                "Node.js",
+                "MySQL",
+                "API Integration",
+                "Git",
+                "MVC Architecture"
             ]
         },
         {
             "id": 2,
-            "company": "Sandi",
-            "logo": "https://placehold.co/100x100/000000/FFFFFF?text=Sandi",
-            "role": "Software Developer",
-            "period": "Jun 2019 – Jun 2021",
-            "location": "Sandburg (Hybrid)",
-            "description": "Developed and maintained server-side applications and services. Conducted structured code reviews to improve system stability and code quality. Participated in client-facing technical discussions to translate requirements into solutions. Integrated third-party APIs to extend platform capabilities.",
+            "company": "MDS Collivery",
+            "logo": "https://placehold.co/100x100/000000/FFFFFF?text=MDS",
+            "role": "Software Systems Developer",
+            "period": "Jan 2017 – Jul 2019",
+            "location": "Johannesburg",
+            "description": "Worked on logistics and courier systems, focusing on system stability, real-time data processing, and multi-user optimization. Improved backend performance through structured code, testing, and deployment cycles. Contributed to version control discipline and CI/CD practices to ensure smooth feature rollouts. Applied modular design principles to increase maintainability and reduce production issues.",
             "tech_stack": [
-                "Server-side Development",
-                "Code Reviews",
-                "API Integration"
+                "PHP",
+                "Laravel",
+                "MERN Stack",
+                "Docker",
+                "SQL",
+                "Jenkins",
+                "Kubernetes",
+                "CI/CD",
+                "Linux",
+                "JIRA"
+            ]
+        },
+        {
+            "id": 3,
+            "company": "PMD MS Telecommunications",
+            "logo": "https://placehold.co/100x100/000000/FFFFFF?text=PMDMS",
+            "role": "Junior Networking",
+            "period": "Jan 2016 – Dec 2017",
+            "location": "Centurion",
+            "description": "Provided networking support and infrastructure setup, including installation and configuration of local networks and hardware. Maintained compliance documentation, performance reporting, and technical logs. Gained foundational experience in networking concepts and processes, which later informed DevOps and system architecture practices.",
+            "tech_stack": [
+                "Networking Fundamentals",
+                "Troubleshooting",
+                "Hardware Setup",
+                "System Documentation"
             ]
         }
     ],
@@ -82,7 +104,7 @@
             "degree": "BSc. in Information Technology",
             "period": "2020 – 2024",
             "location": "South Africa",
-            "focus": "Major in Software Engineering. Coursework: Advanced Algorithms, Database Systems, Distributed Computing."
+            "focus": "Software Engineering major with emphasis on algorithms, structured programming, database systems, and distributed computing. Strengthened analytical thinking and system design skills through practical coursework and applied projects."
         },
         {
             "id": 2,
@@ -91,7 +113,7 @@
             "degree": "Diploma in Software Development",
             "period": "2013 – 2016",
             "location": "South Africa",
-            "focus": "Network Design, Infrastructure Management, Business Intelligence."
+            "focus": "Foundational training in systems development, network fundamentals, and infrastructure configuration. Gained early exposure to business intelligence, data workflows, and structured technical environments."
         },
         {
             "id": 3,
@@ -100,7 +122,7 @@
             "degree": "National Senior Certificate",
             "period": "2008 – 2012",
             "location": "Pretoria, South Africa",
-            "focus": "Matriculated with University Exemption."
+            "focus": "Completed with University Exemption."
         }
     ],
     "languages": [
@@ -111,10 +133,11 @@
     ],
     "references": [
         {
-            "name": "References",
+            "name": "Professional References",
             "role": "Available upon request",
-            "linkedin": "",
-            "phone": ""
+            "github": "https://github.com/mr-karabonhlamulo",
+            "linkedin": "https://www.linkedin.com/in/mr-karabonhlamulo",
+            "phone": "+27 67 252 1424"
         }
     ]
 }

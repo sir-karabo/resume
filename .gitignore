@@ -120,4 +120,6 @@ dist
 
 # Vite
 dist-ssr
-*.local
+
+# Local Database
+database.sqlite

@@ -50,10 +50,19 @@ npm run dev
 -   **Frontend**: http://localhost:5173
 -   **Backend Server**: http://localhost:3000 (or configured port)
 
-### 3. Build for Production
+### 3. Deployment (Optimized for Vercel/GitHub Pages)
 
-To create a production-ready build:
+This project is optimized for **static deployment** (Vercel, GitHub Pages, Netlify). 
 
+The main resume view uses static JSON data, so it does not require the backend server to run online.
+
+**Workflow:**
+1.  **Edit Content Locally**: Run `npm run dev` and use the built-in Admin Dashboard (login: `admin` / `1234`) to edit your resume and projects.
+2.  **Save Changes**: Saving in the dashboard updates the local JSON files in `src/data`.
+3.  **Commit & Push**: Commit the updated JSON files to GitHub.
+4.  **Deploy**: Your connected hosting provider (e.g., Vercel) will automatically rebuild the site with your new data.
+
+To build locally for checking:
 ```bash
 npm run build
 ```

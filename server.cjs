@@ -29,23 +29,19 @@ db.exec(`
 
 // Seed Data if empty
 const seedData = () => {
-    const resumeStmt = db.prepare('SELECT value FROM site_data WHERE key = ?');
-    if (!resumeStmt.get('resume')) {
-        const resumePath = path.join(__dirname, 'src', 'data', 'resume.json');
-        if (fs.existsSync(resumePath)) {
-            const resumeData = fs.readFileSync(resumePath, 'utf8');
-            db.prepare('INSERT INTO site_data (key, value) VALUES (?, ?)').run('resume', resumeData);
-            console.log('Seeded resume data');
-        }
+    // Always sync JSON to DB on startup to capture manual file edits
+    const resumePath = path.join(__dirname, 'src', 'data', 'resume.json');
+    if (fs.existsSync(resumePath)) {
+        const resumeData = fs.readFileSync(resumePath, 'utf8');
+        db.prepare('INSERT OR REPLACE INTO site_data (key, value) VALUES (?, ?)').run('resume', resumeData);
+        console.log('Synced resume data from file');
     }
 
-    if (!resumeStmt.get('projects')) {
-        const projectsPath = path.join(__dirname, 'src', 'data', 'projects.json');
-        if (fs.existsSync(projectsPath)) {
-            const projectsData = fs.readFileSync(projectsPath, 'utf8');
-            db.prepare('INSERT INTO site_data (key, value) VALUES (?, ?)').run('projects', projectsData);
-            console.log('Seeded projects data');
-        }
+    const projectsPath = path.join(__dirname, 'src', 'data', 'projects.json');
+    if (fs.existsSync(projectsPath)) {
+        const projectsData = fs.readFileSync(projectsPath, 'utf8');
+        db.prepare('INSERT OR REPLACE INTO site_data (key, value) VALUES (?, ?)').run('projects', projectsData);
+        console.log('Synced projects data from file');
     }
 
     const userStmt = db.prepare('SELECT username FROM users WHERE username = ?');

@@ -130,5 +130,137 @@
             "quality": "Dynamic",
             "time": "Active"
         }
+    },
+    {
+        "id": 104,
+        "title": "Hospital System",
+        "category": "Enterprise Solutions",
+        "image": "https://placehold.co/600x400/2196F3/FFFFFF?text=Hospital+App",
+        "year": "2024",
+        "role": ".NET Developer",
+        "problem": "Hospital administration is often bogged down by paper trails and disconnected systems, leading to slower patient care.",
+        "approach": "I developed a centralized management system using C# and Blazor. I focused on a clean architecture to handle patient records securely and efficiently, ensuring sensitive data is isolated but accessible to authorized personnel.",
+        "outcome": "A streamlined platform that reduces administrative overhead and lets healthcare providers focus more on patients.",
+        "techStack": [
+            "C#",
+            "Blazor",
+            "SQL Server",
+            "Entity Framework"
+        ],
+        "metrics": {
+            "price": "Private",
+            "quality": "Secure",
+            "time": "Active"
+        }
+    },
+    {
+        "id": 105,
+        "title": "Grocery Manager",
+        "category": "Retail Systems",
+        "image": "https://placehold.co/600x400/4CAF50/FFFFFF?text=Grocery+Manager",
+        "year": "2024",
+        "role": "Backend Engineer",
+        "problem": "Managing stock across multiple grocery departments is chaotic without a unified view, leading to waste and lost sales.",
+        "approach": "I built a robust inventory tracking application using C# and MVC. It features real-time stock level monitoring and automated alerts for low inventory, all powered by a highly optimized SQL backend.",
+        "outcome": "Improved inventory accuracy and operational efficiency, significantly reducing food waste.",
+        "techStack": [
+            "C#",
+            "ASP.NET MVC",
+            "LINQ",
+            "Bootstrap"
+        ],
+        "metrics": {
+            "price": "Private",
+            "quality": "Efficient",
+            "time": "Active"
+        }
+    },
+    {
+        "id": 106,
+        "title": "Booking System",
+        "category": "Web Application",
+        "image": "https://placehold.co/600x400/9C27B0/FFFFFF?text=Booking+System",
+        "year": "2024",
+        "role": "Full Stack .NET",
+        "problem": " scheduling conflicts are a major headache for service-based businesses, often resulting in double bookings and frustrated clients.",
+        "approach": "This ASP.NET Core solution implements a conflict-detection algorithm to ensure zero overlap. I used a code-first approach with Entity Framework to design a flexible database schema that adapts to different service types.",
+        "outcome": "A reliable scheduling tool that eliminates booking errors and improves customer trust.",
+        "techStack": [
+            "C#",
+            "ASP.NET Core",
+            "REST API",
+            "EF Core"
+        ],
+        "metrics": {
+            "price": "Private",
+            "quality": "Reliable",
+            "time": "Active"
+        }
+    },
+    {
+        "id": 107,
+        "title": "Library Catalog",
+        "category": "Information Systems",
+        "image": "https://placehold.co/600x400/FF5722/FFFFFF?text=Library+App",
+        "year": "2024",
+        "role": ".NET Developer",
+        "problem": "Traditional library searches can be slow and unforgiving if you don't know the exact book title.",
+        "approach": "I created a smart cataloging system using C# that supports fuzzy search and advanced filtering. The system uses a clean N-Tier architecture to separate the user interface from the complex search logic.",
+        "outcome": "Users can find resources instantly, even with partial information, making the library much more accessible.",
+        "techStack": [
+            "C#",
+            "Web Forms",
+            "SQL",
+            "ADO.NET"
+        ],
+        "metrics": {
+            "price": "Private",
+            "quality": "Searchable",
+            "time": "Active"
+        }
+    },
+    {
+        "id": 108,
+        "title": "Virtual Classroom",
+        "category": "EdTech",
+        "image": "https://placehold.co/600x400/3F51B5/FFFFFF?text=Virtual+Classroom",
+        "year": "2024",
+        "role": "Software Architect",
+        "problem": "Remote learning often feels disconnected, with tools that lack the interactivity of a real classroom.",
+        "approach": "I architected a virtual learning environment using ASP.NET. It features real-time assignment tracking and a discussion board, leveraging SignalR for instant communication between students and teachers.",
+        "outcome": "A cohesive digital learning space that fosters better engagement and streamlines course management.",
+        "techStack": [
+            "C#",
+            "ASP.NET",
+            "SignalR",
+            "Razor Pages"
+        ],
+        "metrics": {
+            "price": "Private",
+            "quality": "Interactive",
+            "time": "Active"
+        }
+    },
+    {
+        "id": 109,
+        "title": "Snake Game",
+        "category": "Game Development",
+        "image": "https://placehold.co/600x400/8BC34A/FFFFFF?text=Snake+Game",
+        "year": "2024",
+        "role": "C# Developer",
+        "problem": "Understanding the core mechanics of game loops and object-oriented collision detection is fundamental for any developer, yet often overlooked.",
+        "approach": "I built this classic game from the ground up using pure C#. It focuses on memory management and performant logic loops to ensure smooth gameplay without heavy engine overhead.",
+        "outcome": "A flawlessly smooth retro gaming experience that demonstrates strong command of core programming algorithms.",
+        "techStack": [
+            "C#",
+            ".NET Framework",
+            "Windows Forms",
+            "GDI+"
+        ],
+        "metrics": {
+            "price": "Open Source",
+            "quality": "Fun",
+            "time": "Active"
+        }
     }
 ]

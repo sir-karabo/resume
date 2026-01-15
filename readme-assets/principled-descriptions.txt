@@ -1,0 +1,134 @@
+[
+    {
+        "id": 101,
+        "title": "LocaGroca (Food)",
+        "category": "iOS Development",
+        "image": "https://placehold.co/600x400/FF6B6B/FFFFFF?text=LocaGroca",
+        "year": "2024",
+        "role": "Mobile Engineer",
+        "problem": "Generic food delivery applications often suffer from the 'Massive View Controller' anti-pattern, leading to bloated, untestable codebases that are difficult to maintain. Additionally, users in local markets feel disconnected from the source of their food due to sterile, robotic interfaces.",
+        "approach": "I adopted the MVVM (Model-View-ViewModel) architecture to enforce the Single Responsibility Principle, strictly decoupling the UI from business logic. This ensures that the code is unit-testable and modular. To address the user disconnect, I prioritized a 'warm' design language with smooth micro-interactions that mimic a friendly marketplace experience.",
+        "outcome": "A highly maintainable, production-grade iOS codebase that delivers a delightful, community-focused user experience, proving that clean architecture enables agile feature development.",
+        "techStack": [
+            "Swift",
+            "SwiftUI",
+            "MVVM",
+            "CoreData"
+        ],
+        "metrics": {
+            "price": "Private",
+            "quality": "SOLID Compliant",
+            "time": "Active"
+        }
+    },
+    {
+        "id": 102,
+        "title": "Grocery System",
+        "category": "Full-Stack Mobile",
+        "image": "https://placehold.co/600x400/4ECDC4/FFFFFF?text=Grocery+App",
+        "year": "2024",
+        "role": "Full Stack Engineer",
+        "problem": "A common frustration in mobile development is the 'it works on my machine' dilemma, caused by discrepancies between local dev environments and production servers. Furthermore, disjointed data states between the app and the warehouse lead to frustrated users ordering out-of-stock items.",
+        "approach": "I engineered the backend as a set of stateless services adhering to the 12-Factor App methodology, specifically focusing on Dev/Prod parity. By containerizing the environment, I guaranteed consistent behavior across all stages. I also implemented real-time web-hooks to ensure valid inventory synchronization.",
+        "outcome": "A robust, fail-safe full-stack ecosystem where the mobile frontend and backend services operate in perfect harmony, eliminating deployment surprises and data conflicts.",
+        "techStack": [
+            "Swift",
+            "REST API",
+            "12-Factor App",
+            "CI/CD"
+        ],
+        "metrics": {
+            "price": "Private",
+            "quality": "12-Factor",
+            "time": "Active"
+        }
+    },
+    {
+        "id": 15,
+        "title": "Home Services (MVC)",
+        "category": "Software Architecture",
+        "image": "/assets/projects/project-15.jpg",
+        "year": "2024",
+        "role": "Backend Architect",
+        "problem": "Many legacy web and e-commerce applications devolve into 'Spaghetti Code', where business rules, database queries, and HTML are tightly coupled. This makes even simple updates risky and prone to breaking unrelated features.",
+        "approach": "To solve this, I built a custom MVC (Model-View-Controller) framework from the ground up. This strictly enforced the Separation of Concerns (SoC) principle: Models handle data, Views handle presentation, and Controllers manage logic. This structure follows the Open/Closed Principle, allowing the system to be extended without modifying existing code.",
+        "outcome": "A clean, architectural framework that serves as a solid foundation for scalable web applications, demonstrating how disciplined engineering prevents technical debt.",
+        "techStack": [
+            "PHP",
+            "MySQL",
+            "MVC Pattern",
+            "OOP"
+        ],
+        "metrics": {
+            "price": "Private",
+            "quality": "Clean Architecture",
+            "time": "Active"
+        }
+    },
+    {
+        "id": 10,
+        "title": "LibraCore (Library)",
+        "category": "Web Development",
+        "image": "/assets/projects/project-10.jpg",
+        "year": "2024",
+        "role": "Frontend Specialist",
+        "problem": "Traditional library interfaces are often clunky and suffer from 'Fragile Base Class' issues where shared global state causes unpredictable UI bugs. Users struggle to navigate these systems, finding them outdated and uninspiring.",
+        "approach": "I utilized React’s component-based architecture combined with TypeScript to strictly enforce Encapsulation and Type Safety. Each component manages its own state and side-effects, acting as a self-contained unit. This aligns with modern Object-Oriented Design (OOD) principles applied to the frontend.",
+        "outcome": "A futuristic 'World of Knowledge' interface that is not only visually stunning but technically bulletproof, offering a bug-free experience through rigorous static typing.",
+        "techStack": [
+            "TypeScript",
+            "React",
+            "OOD",
+            "Node.js"
+        ],
+        "metrics": {
+            "price": "Private",
+            "quality": "Type Safe",
+            "time": "Active"
+        }
+    },
+    {
+        "id": 11,
+        "title": "Futuristic Banking",
+        "category": "FinTech Engineering",
+        "image": "/assets/projects/project-11.jpg",
+        "year": "2024",
+        "role": "Frontend Architect",
+        "problem": "Financial applications face the critical risk of race conditions and inconsistent state, where a user sees one balance but the system records another. On top of that, most banking apps feel sterile, lacking the engagement of modern digital experiences.",
+        "approach": "I implemented a Unidirectional Data Flow architecture (inspired by Redux) to ensure a single, immutable source of truth for the application state. All updates follow a strict lifecycle, making state mutations predictable and race-condition free. This rigorous logic is wrapped in a 'Woolworths × Apple' aesthetic.",
+        "outcome": "A deterministic, high-integrity financial platform that marries the security of a bank vault with the fluidity and beauty of a modern consumer app.",
+        "techStack": [
+            "TypeScript",
+            "React",
+            "Immutable State",
+            "3D"
+        ],
+        "metrics": {
+            "price": "Private",
+            "quality": "Deterministic",
+            "time": "Active"
+        }
+    },
+    {
+        "id": 103,
+        "title": "Resume / Portfolio",
+        "category": "DevOps & Web",
+        "image": "https://placehold.co/600x400/333333/FFFFFF?text=Portfolio",
+        "year": "2024",
+        "role": "Software Engineer",
+        "problem": "Static portfolios are often hard to update, requiring a full code deployment just to change a line of text. This violates the principle of separation between code and configuration, making maintenance a chore.",
+        "approach": "I treated this portfolio as a dynamic application, applying the 12-Factor principle of 'Externalized Configuration'. All project data is separated from the presentation logic and loaded dynamically. This Infrastructure-as-Code approach allows the content to evolve independently of the software release cycle.",
+        "outcome": "A living, breathing portfolio that demonstrates professional engineering standards even in a personal project, serving as a dynamic showcase of continuous growth.",
+        "techStack": [
+            "JavaScript",
+            "JSON",
+            "12-Factor Config",
+            "React"
+        ],
+        "metrics": {
+            "price": "Public",
+            "quality": "Config Driven",
+            "time": "Active"
+        }
+    }
+]

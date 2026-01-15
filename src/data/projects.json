@@ -6,8 +6,9 @@
         "image": "https://placehold.co/600x400/FF6B6B/FFFFFF?text=LocaGroca",
         "year": "2024",
         "role": "Mobile Engineer",
-        "description": "Addressed the anti-pattern of 'Massive View Controllers' which often renders iOS codebases untestable. I implemented the MVVM (Model-View-ViewModel) architecture to strictly decouple UI rendering from business logic. This approach was chosen to enforce the Single Responsibility Principle (SOLID), ensuring that view logic remains lightweight and ensuring the business rules are unit-testable in isolation.",
-        "outcome": "A testable, modular iOS architecture with clear separation of concerns.",
+        "problem": "Generic delivery apps can feel so cold and robotic, and honestly, the code behind them often gets just as messy. I wanted to build something that felt human and welcoming.",
+        "approach": "I built this app with a focus on warmth and simplicity. Using SwiftUI, I created smooth, friendly animations that make the app feel alive. Under the hood, I kept things tidy with a clean structure (MVVM) so it's easy to update and keeps working smoothly.",
+        "outcome": "A delightful, easy-to-use food app that connects people with local markets, built on code thats as fresh as the produce.",
         "techStack": [
             "Swift",
             "SwiftUI",
@@ -16,7 +17,7 @@
         ],
         "metrics": {
             "price": "Private",
-            "quality": "SOLID Principles",
+            "quality": "Friendly UI",
             "time": "Active"
         }
     },
@@ -27,17 +28,18 @@
         "image": "https://placehold.co/600x400/4ECDC4/FFFFFF?text=Grocery+App",
         "year": "2024",
         "role": "Full Stack Engineer",
-        "description": "Solved the 'it works on my machine' dilemma caused by inconsistent environments between development and production. I architected the backend as stateless services compliant with 12-Factor App principles, specifically focusing on Dev/Prod parity and backing services. This ensures that the API behaves identically across all stages, eliminating environment-specific bugs during mobile integration.",
-        "outcome": "Reliable, stateless backend services ensuring consistent mobile integration.",
+        "problem": "It's super frustrating when you order something online only to find out later it's out of stock. That disconnect between the app and the warehouse is a real pain.",
+        "approach": "I connected the mobile app directly to the backend systems so they talk to each other in real-time. By keeping the server environment consistent (using containerization concepts), I made sure that what you see on your phone is exactly what's on the shelf.",
+        "outcome": "A reliable shopping experience where inventory is always in sync, so no more disappointing out-of-stock emails.",
         "techStack": [
             "Swift",
             "REST API",
-            "12-Factor App",
+            "Real-time Sync",
             "CI/CD"
         ],
         "metrics": {
             "price": "Private",
-            "quality": "12-Factor Compliant",
+            "quality": "Reliable",
             "time": "Active"
         }
     },
@@ -48,8 +50,9 @@
         "image": "/assets/projects/project-15.jpg",
         "year": "2024",
         "role": "Backend Architect",
-        "description": "Tackled the issue of 'Spaghetti Code' where business logic is interspersed with HTML, making maintenance a nightmare. I engineered a custom MVC framework to strictly enforce Separation of Concerns (SoC). This architectural choice ensures that data access (Model), user interface (View), and application logic (Controller) change independently, adhering to the Open/Closed Principle for future extensions.",
-        "outcome": "A modular framework allowing independent scaling of logic and presentation.",
+        "problem": "Ever look at older websites and feel like the code is just a tangled mess of spaghetti? It makes adding new features scary because one small change breaks everything.",
+        "approach": "I decided to build my own framework to keep things organized. I separated the data, the logic, and what the user sees into their own lanes. It's like having a tidy filing cabinet instead of a messy desk—everything has its place.",
+        "outcome": "A clean, organized system that's easy to maintain and grow, proving that a little structure goes a long way.",
         "techStack": [
             "PHP",
             "MySQL",
@@ -58,7 +61,7 @@
         ],
         "metrics": {
             "price": "Private",
-            "quality": "Clean Architecture",
+            "quality": "Clean Code",
             "time": "Active"
         }
     },
@@ -69,17 +72,18 @@
         "image": "/assets/projects/project-10.jpg",
         "year": "2024",
         "role": "Frontend Specialist",
-        "description": "Mitigated the risk of 'Fragile Base Class' problems and unpredictable UI side effects in complex layouts. I utilized React's component-based architecture with TypeScript to enforce Encapsulation and Type Safety. This decision ensures that each UI component manages its own state and dependencies, preventing leaky abstractions and making the system resilient to refactoring.",
-        "outcome": "A resilient, type-safe component library with predictable rendering.",
+        "problem": "Library websites are notorious for being boring and clunky. I wanted to change that perception and make discovering knowledge feel exciting and modern.",
+        "approach": "I treated each part of the interface like a building block (component) using React. This keeps the design consistent and the interactions snappy. It's built to be robust, so you don't run into weird glitches while browsing.",
+        "outcome": "A 'World of Knowledge' that feels more like a modern app and less like a dusty archive, making learning fun again.",
         "techStack": [
             "TypeScript",
             "React",
-            "OOD",
+            "Component Design",
             "Node.js"
         ],
         "metrics": {
             "price": "Private",
-            "quality": "Encapsulated",
+            "quality": "Modern Feel",
             "time": "Active"
         }
     },
@@ -90,8 +94,9 @@
         "image": "/assets/projects/project-11.jpg",
         "year": "2024",
         "role": "Frontend Architect",
-        "description": "Addressed the problem of race conditions and unpredictable state mutations common in asynchronous financial transactions. I implemented a Unidirectional Data Flow pattern (Redux-style) to manage application state. This was chosen to maintain 'Single Source of Truth', ensuring that all UI updates are deterministic and easier to debug, which is critical for financial data integrity.",
-        "outcome": "Deterministic state management ensuring high-integrity transaction flows.",
+        "problem": "Banking apps are usually safe but boring, or pretty but glitched. I wanted to prove you can have both: a secure vault that looks like a high-end tech product.",
+        "approach": "I used a strict 'one-way street' logic for data to make sure your balance is always accurate—no guessing games. key wrapped this rock-solid logic in a sleek, Apple-inspired 3D design to make finance feel premium.",
+        "outcome": "A banking platform that you actually enjoy looking at, combining verified security with a top-tier visual experience.",
         "techStack": [
             "TypeScript",
             "React",
@@ -100,7 +105,7 @@
         ],
         "metrics": {
             "price": "Private",
-            "quality": "Deterministic",
+            "quality": "Premium UX",
             "time": "Active"
         }
     },
@@ -111,17 +116,18 @@
         "image": "https://placehold.co/600x400/333333/FFFFFF?text=Portfolio",
         "year": "2024",
         "role": "Software Engineer",
-        "description": "Overcame the inefficiency of requiring code deployments for simple content updates. I applied the 12-Factor principle of 'Externalized Configuration' by separating content (data) from the codebase. This allows the portfolio's content to be updated dynamically without triggering a full rebuild of the application logic, treating content as a backing service.",
-        "outcome": "A meaningful separation of code and content, enabling rapid updates.",
+        "problem": "Updating a portfolio shouldn't be a chore. I didn't want to dive into code every time I just wanted to fix a typo or add a new project.",
+        "approach": "I built this site to be smart. It reads all my data from a simple file, so I can update my content easily without breaking the site. It's like having a CMS (Content Management System) built right in.",
+        "outcome": "A living, breathing website that grows with me, showing that even simple projects deserve smart engineering.",
         "techStack": [
             "JavaScript",
             "JSON",
-            "12-Factor Config",
+            "Smart Config",
             "React"
         ],
         "metrics": {
             "price": "Public",
-            "quality": "Config Driven",
+            "quality": "Dynamic",
             "time": "Active"
         }
     }
